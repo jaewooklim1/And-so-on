@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router";
 import { AuthRoute } from "../utils/route_util";
-import login_form_container from "./login_form_container";
-import signup_form_container from "./signup_form_container";
+import login_form_container from "./session/login_form_container";
+import signup_form_container from "./session/signup_form_container";
 import GreetingContainer from "./greeting/greeting_container";
 
 const App = () => (

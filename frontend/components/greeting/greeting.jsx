@@ -13,9 +13,9 @@ class Greeting extends React.Component{
       </div>
     ) : (
       <div>
-        <Link className="btn" to="/signup">Sign Up</Link>
+        <Link className="signup" to="/signup">Sign Up</Link>
         <br/>
-        <Link className="btn" to="/login">Log In</Link>
+        <Link className="login" to="/login">Log In</Link>
       </div>
     );
 
