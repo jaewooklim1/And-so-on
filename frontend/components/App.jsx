@@ -7,8 +7,9 @@ import signup_form_container from "./signup_form_container";
 const App = () => (
   <div>
     <h1>And-so-on</h1>
-    <AuthRoute path="/login" component={login_form_container} />
-    <AuthRoute path="/signup" component={signup_form_container} />
+    <Route path="/login" component={login_form_container} />
+    <Route path="/signup" component={signup_form_container} />
+       {/* <GreetingContainer /> */}
   </div>
 );
 

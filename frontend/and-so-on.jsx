@@ -11,3 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch; // just for testing!
     ReactDOM.render(<Root store={ store } />, root)
 })
+
+
+// // import React from "react";
+// import ReactDOM from "react-dom";
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const root = document.getElementById("root");
+//   ReactDOM.render(<h1>Welcome to BenchBnB</h1>, root);
+// });

@@ -13,7 +13,7 @@ class User < ApplicationRecord
         if user && user.is_password?(pasword)
             user
         else
-            nill
+            nil
         end
     end
 
