@@ -16,7 +16,7 @@ class SessionForm extends React.Component{
   handleInput(type) {
     return (e) => {
       this.setState({
-        [type]: e.target.value
+        [type]: e.currentTarget.value
       })
     }
   }
@@ -24,26 +24,38 @@ class SessionForm extends React.Component{
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.props.processForm(user);
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render(){
     let link = (this.props.formType === "login") ? "signup" : "login"
     return(
       <div>
-        <h1>{this.props.formType}</h1>
-        <Link to={`/${link}`}>{link}</Link>
-        <p>{this.props.errors.session.join(". ")}</p>
+        <h1>Welcome to the {this.props.formType} page!</h1>
+        <Link to={`/${link}`}>{link}</Link> instead       
         <form onSubmit={this.handleSubmit}>
           <label>Email:
             <input type="text" value={this.state.email} onChange={this.handleInput("email")} />
           </label>
-          {(this.props.formType === "signup") ? 
-            <label>Display Name:
-              <input type="displayName" value={this.state.displayName} onChange={this.handleInput("displayName")} />
+            {(this.props.formType === "signup") ? 
+            <label>Username:
+              <input type="username" value={this.state.username} onChange={this.handleInput("username")} />
             </label> : 
             <></>
-          } 
-          
+          }
+          <br/>
           <label>Password:
             <input type="password" value={this.state.password} onChange={this.handleInput("password")} />
           </label>
