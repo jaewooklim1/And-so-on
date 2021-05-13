@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+ .full-page {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    position: relative;
+ }
+
+ .nav-belt {
+    min-width: 905px;
+    position: relative;
+    font-size: 12px;
+    height: 60px;
+    background-color: #131A22;
+    font-family: inherit;
+    justify-content: space-between;
+    text-align: right;
+    box-sizing: border-box;
+    z-index: 3;
+    display: flex;
+    width: 100%;
+}

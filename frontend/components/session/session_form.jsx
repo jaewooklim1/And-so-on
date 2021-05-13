@@ -43,24 +43,28 @@ class SessionForm extends React.Component{
     let link = (this.props.formType === "login") ? "signup" : "login"
     return(
       <div>
-        <h1>Welcome to the {this.props.formType} page!</h1>
-        <Link to={`/${link}`}>{link}</Link> instead       
-        <form onSubmit={this.handleSubmit}>
-          <label>Email:
-            <input type="text" value={this.state.email} onChange={this.handleInput("email")} />
-          </label>
-            {(this.props.formType === "signup") ? 
-            <label>Username:
-              <input type="username" value={this.state.username} onChange={this.handleInput("username")} />
-            </label> : 
-            <></>
-          }
-          <br/>
-          <label>Password:
-            <input type="password" value={this.state.password} onChange={this.handleInput("password")} />
-          </label>
-          <button type="submit">{this.props.formType}</button>
-        </form>
+        <div>
+          <h1>Welcome to the {this.props.formType} page!</h1>
+            
+            <Link to={`/${link}`}>{link}</Link> instead       
+            <form onSubmit={this.handleSubmit}>
+              <label>Email:
+                <input type="text" value={this.state.email} onChange={this.handleInput("email")} />
+              </label>
+                {(this.props.formType === "signup") ? 
+                <label>Username:
+                  <input type="username" value={this.state.username} onChange={this.handleInput("username")} />
+                </label> : 
+                <></>
+              }
+                <br/>
+              <label>Password:
+                <input type="password" value={this.state.password} onChange={this.handleInput("password")} />
+              </label>
+              <button type="submit">{this.props.formType}</button>
+          </form>
+        </div>
+        
       </div>
     )
   }
