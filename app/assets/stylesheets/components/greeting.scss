@@ -18,7 +18,7 @@
     background-color: #232f3e;
     margin: 0;
     padding: 0;
-    border: 0;
+    
   }
 
 .nav-logo {
@@ -48,6 +48,44 @@
     z-index: 10;
 }
 
+.nav-mid {    
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.nav-searchbar {
+    // height: 38px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+    font-size: 30.5px;
+    padding: 8px;
+    flex: 2;
+    width: 100;
+    top: 0;
+    left: 0;
+}
+    
+.w3review {
+    display: block;
+    width: 300px;
+    height: 150px;
+    padding: 7px 10px 10px 0;
+    margin: 0;
+    border: 0;
+    height: 38px;
+    font-family: inherit;
+    font-size: 155px;
+    background: 0 0;
+    color: #111;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    text-indent: 8px;
+    direction: ltr;
+    
+}
+
 
 .sub-banner {
     background: #232F3E;
@@ -62,18 +100,21 @@
     margin: 0;
     padding: 2px;
     border: 0;
-    word-spacing: 2em;
+    word-spacing: 2.5em;
 }
 
 .account-container {
     display: block;
     font-family: inherit;
     letter-spacing: 0.3px;
-    // padding: 12px 10px 10px 10px;
-    background-color: white;
+    background:  #131A22;
+    color: white;
+    // padding: 12px 10px 10px 10px;   
     text-align: left;
     border: 1px solid transparent;
     text-decoration: underline;
+    width: 150px;
+    height: 60px;
 }
 
 .account-container:hover, .account-container:active {

@@ -18,8 +18,10 @@ class Greeting extends React.Component{
                     <div id='and-so-on-logo' />
                 </div> 
             </div> 
-            <div className="nav_mid">
+            <div className="nav-mid">
                 <div className='nav-searchbar'>
+                    <textarea id="search-bar" name="w3review" rows="1" cols="150">
+                    </textarea>
                 {/* <SearchBarContainer /> */}
                 </div>
             </div>
