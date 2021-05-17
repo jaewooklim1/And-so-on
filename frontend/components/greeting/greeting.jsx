@@ -67,7 +67,7 @@ class Greeting extends React.Component{
                 </div> 
                 <div className="nav-mid">
                     <div className='nav-searchbar'>
-                        <textarea id="search-bar" name="w3review" rows="1" cols="10">
+                        <textarea className="search-bar" rows="1" cols="10">
                         </textarea>
                     {/* <SearchBarContainer /> */}
                     </div>
@@ -91,7 +91,7 @@ class Greeting extends React.Component{
                         {/* <p>Welcome, {this.props.currentUser.username}</p> */}
                         <div className='signin-login-dropdown'>
                             <Link to='/login'>
-                                <input className='submit-button' id='dropdown-yellow' type="submit" value="Sign in" />
+                                <input className='submit-button-dropdown' id='dropdown-yellow' type="submit" value="Sign in" />
                             </Link>
                             <span className='alt-link' id='new-customer-dropdown'>New customer? <Link to='/signup' id='start-here-link'>Start here.</Link></span>
                         </div>

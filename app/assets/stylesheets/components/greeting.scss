@@ -40,7 +40,7 @@ body {
 #and-so-on-logo {
     height: 120px;
     width: 115px;
-    margin-top: 10px;
+    margin-top: 3px;
     margin-left: 10px;
     background-image: image_url('And-so-on-2.png');
     background-size: contain;
@@ -56,8 +56,8 @@ body {
     background-image: image_url('alexa_stuff.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    z-index: 10;
-    display: none;
+    z-index: 0;
+    // display: none;
 }
 
 .nav-mid {    
@@ -77,8 +77,18 @@ body {
     width: 100;
     top: 0;
     left: 0;
-    width: 30%;
+    width: 80%;
 }
+
+
+.search-bar {
+    margin: 0px;
+    height: 25px;
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+}
+
 
 .nav-right {
     width: 30%;
