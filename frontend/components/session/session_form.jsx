@@ -8,9 +8,12 @@ class SessionForm extends React.Component{
     this.state = {
       email: "",
       password: "",
-      username: ""
+      password_confirmation: "",
+      username: "",
+      submitPressed: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   handleInput(type) {
@@ -23,7 +26,16 @@ class SessionForm extends React.Component{
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
+
+    this.setState({
+      submitPressed: true
+    });
+
+    const user = {
+      email: this.state.email,
+      password: this.state.password,
+      username: this.state.username      
+    };    
     this.props.processForm(user);
   }
 
@@ -38,9 +50,19 @@ class SessionForm extends React.Component{
       </ul>
     );
   }
+  
+  update(field) {
+    return e => this.setState({
+        [field]: e.currentTarget.value
+    });
+  }
+
+  // componentDidMount() {
+  //   this.props.dispatchedClearErrors();
+  // }
 
   render(){
-    let link = (this.props.formType === "login") ? "signup" : "login"
+    let link = (this.props.formType === "login") ? "Create And-so-on Account" : "login"
     return(
       <div>
         <div>
@@ -51,20 +73,31 @@ class SessionForm extends React.Component{
               <label>Email:
                 <input type="text" value={this.state.email} onChange={this.handleInput("email")} />
               </label>
-                {(this.props.formType === "signup") ? 
+              <div>
+                {this.state.email.length === 0 && this.state.submitPressed ? "Enter Your Email" : ""}
+              </div>
+              <div>
+                {this.state.email.length < 6 && this.state.submitPressed ? "Enter Your Email" : ""}
+              </div>
+                {(this.props.formType === "Create And-so-on Account") ? 
                 <label>Username:
                   <input type="username" value={this.state.username} onChange={this.handleInput("username")} />
                 </label> : 
                 <></>
               }
+              <div>
+                {this.state.username.length < 6 && this.state.submitPressed ? "Enter a valid username" : ""}
+              </div>
                 <br/>
               <label>Password:
                 <input type="password" value={this.state.password} onChange={this.handleInput("password")} />
               </label>
+              <label>Re-enter Password
+                <input type="password_confirmation" value={this.state.password_confirmation} onChange={this.handleInput("password_confirmation")} />
+              </label>
               <button type="submit">{this.props.formType}</button>
           </form>
-        </div>
-        
+        </div>        
       </div>
     )
   }

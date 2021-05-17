@@ -6,7 +6,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     errors: state.errors,
-    formType: "login"
+    formType: "Create And-so-on Account"
   }
 }
 
