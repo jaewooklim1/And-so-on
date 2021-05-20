@@ -20,8 +20,8 @@ const App = () => (
       
     </header>
     <div className="all-products">
-      <Route exact path='/products/:productId' component={ProductsContainer} />
-      <Route exact path='/products' component={ProductsIndexContainer} />
+      <Route exact path='/:productId' component={ProductsContainer} />
+      <Route exact path='/' component={ProductsIndexContainer} />
     </div>
     <div className="account-creation">
       <Switch>

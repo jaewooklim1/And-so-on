@@ -16,7 +16,7 @@ class ProductsIndex extends React.Component {
         return (
             <div className='product-index'>
                 <span className='all-products-head'>Products</span>
-                <ul className='item-listing'>
+                <ul className='product-listing'>
                     {products.map(product => <ProductIndexSingle key={product.id} product={product}/>)}
                 </ul>
             </div>

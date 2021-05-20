@@ -10,15 +10,29 @@
 # 
 # demo_user = User.create!(username: 'Test User', email: 'testuser@gmail.com', password:'123456')
 
+require 'open-uri'
+
 Product.destroy_all
 
 product1 = Product.create!(title: "Set of Spoons", info: "A set of 50 spoons", owner_id: "1", price: "19.99", category: "silverware")
+file = open('./app/assets/images/set_of_spoons.jpg')
+product1.photo.attach(io: file, filename: 'set_of_spoons.jpg')
+product1.save!
 
 product2 = Product.create!(title: "Hamster Wheel", info: "A hamster wheel. Perfect for getting exercise for your hamster", owner_id: "2", price: "23.99", category: "pet supplies")
+file1 = open('./app/assets/images/hamster+wheel.jpg')
+product2.photo.attach(io: file1, filename: 'hamster+wheel.jpg')
+product2.save!
 
 product3 = Product.create!(title: "Dog Food", info: "A box of dry dog good. Perfect for your growing dog", owner_id: "2", price: "13.99", category: "pet supplies")
+file2 = open('./app/assets/images/dog+food.jpg')
+product3.photo.attach(io: file2, filename: 'dog+food.jpg')
+product3.save!
 
 product4 = Product.create!(title: "Oculoid Headset", info: "Enter the world of virtual reality with the new oculoid headset. With 480p and controllers, feel like you're in the game today!", owner_id: "3", price: "299.99", category: "video game consoles")
+file3 = open('./app/assets/images/oculus+headset.jpg')
+product4.photo.attach(io: file3, filename: 'oculus+headset.jpg')
+product4.save!
 
 product5 = Product.create!(title: "Duffel Bag", info: "96L Travel Duffle Bag Foldable for Men Women, Black ", owner_id: "4", price: "9.99", category: "travel supplies")
 
