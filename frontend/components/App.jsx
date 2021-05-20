@@ -6,6 +6,9 @@ import signup_form_container from "./session/signup_form_container";
 import GreetingContainer from "./greeting/greeting_container";
 import { Link, Switch } from 'react-router-dom';
 import greeting_container from "./greeting/greeting_container";
+import ProductsIndexContainer from "./products/products_index_container";
+import ProductsContainer from "./products/products_container";
+
 
 const App = () => (
   <div>
@@ -14,11 +17,17 @@ const App = () => (
         {/* <h1>And-so-on</h1> */}
       </Link>
       <Route exact path="/" component={greeting_container} />
+      
     </header>
+    <div className="all-products">
+      <Route exact path='/products/:productId' component={ProductsContainer} />
+      <Route exact path='/products' component={ProductsIndexContainer} />
+    </div>
     <div className="account-creation">
       <Switch>
         <AuthRoute exact path="/login" component={login_form_container} />
         <AuthRoute exact path="/signup" component={signup_form_container} />
+
       </Switch>
     </div>
   </div>

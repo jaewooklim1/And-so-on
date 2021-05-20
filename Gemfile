@@ -25,6 +25,7 @@ gem 'pry-rails'
 gem 'annotate'
 gem 'bcrypt'
 gem 'jquery-rails'
+gem "aws-sdk-s3"
 # gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
