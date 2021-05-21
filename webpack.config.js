@@ -19,7 +19,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/env', '@babel/react']
-          }
+          },
         },
       },
     ]

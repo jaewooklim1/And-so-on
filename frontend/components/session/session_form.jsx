@@ -13,7 +13,7 @@ class SessionForm extends React.Component{
       submitPressed: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleDemoLogin = this.handleDemoLogin.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleInput(type) {
@@ -36,7 +36,15 @@ class SessionForm extends React.Component{
       password: this.state.password,
       username: this.state.username      
     };    
-    this.props.processForm(user);
+    debugger
+    this.props.processForm(user).then(user => this.props.history.push('/'));
+
+  }
+
+  demoLogin(e) {
+    e.preventDefault();
+    const demoUser = { email: "andreskim@gmail.com", password: "andreskim"};
+    this.props.processForm(demoUser).then(demoUser => this.props.history.push('/'));
   }
 
   renderErrors() {
@@ -83,7 +91,7 @@ class SessionForm extends React.Component{
                   {this.state.email.length === 0 && this.state.submitPressed ? "Enter Your Email" : ""}
                 </div>
                 <div className="form-errors">
-                  {this.state.email.split("@").length !== 3 && this.state.email.length !== 0 && this.state.submitPressed ? "Email must be valid" : ""}
+                  {this.state.email.split("@").length !== 2 && this.state.email.length !== 0 && this.state.submitPressed ? "Email must be valid" : ""}
                 </div>
                 <br></br>
                   {(this.props.formType === "signup") ? 
@@ -130,6 +138,7 @@ class SessionForm extends React.Component{
             <br></br> 
             <br></br> 
             <br></br> 
+              <button className="demo-user-button" onClick={ this.demoLogin}>Demo User Login</button>
             {(this.props.formType === "signup") ? 
             <label className="terms-of-conditions">By creating an account, you agree to And-so-on's non-existent Conditions of Use and Privacy Notice.
             </label> : 

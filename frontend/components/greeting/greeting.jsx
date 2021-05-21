@@ -41,6 +41,7 @@ class Greeting extends React.Component{
 
     this.openModal = this.openModal.bind(this)
     this.closeModal = this.closeModal.bind(this)
+    this.handleLogout = this.handleLogout.bind(this)
   }  
 
     // const [modalIsOpen,setIsOpen] = React.useState(false);
@@ -53,10 +54,16 @@ class Greeting extends React.Component{
     closeModal(){
        this.setState({modalIsOpen: false});
     }
+    
+    handleLogout(){
+        debugger
+        this.props.logout().then(this.props.history.push('/'));
+        // (this.props.history.push('/'));
+    }
 
   render(){    
     // debugger
-    const display = this.props.currentUser
+    // const display = this.props.currentUser
     return(
         <div className='banner'>
             <div className='nav-belt'>
@@ -74,13 +81,18 @@ class Greeting extends React.Component{
                 </div>
                 <div className="nav-right"> 
                     <div className='account-dropdown' onMouseEnter={this.openModal} onMouseLeave={this.closeModal}>
+                        {!this.props.currentUser ? 
                         <Link to='/login'>
                             <button className="account-container">
                                 <span className='first-navigation-line'>Please sign in</span>
                                 <br></br>
                                 <span className='second-navigation-line'>Account & Lists ▾</span>
                             </button>
-                        </Link>
+                        </Link> : <div className="user-signed-in">Hello {this.props.currentUser.email}
+                                    <br></br>
+                                    <span className='second-navigation-line'>Account & Lists ▾</span>
+                                </div>
+                        }
                         <Modal
                         isOpen={this.state.modalIsOpen}                    
                         onRequestClose={this.closeModal}
@@ -89,18 +101,30 @@ class Greeting extends React.Component{
                         ariaHideApp={false}
                         > 
                         {/* <p>Welcome, {this.props.currentUser.username}</p> */}
-                        <div className='signin-login-dropdown'>
+                        
+                            {!this.props.currentUser ? 
+                            <div className='signin-login-dropdown'>
                             <Link to='/login'>
-                                <input className='submit-button-dropdown' id='dropdown-yellow' type="submit" value="Sign in" />
-                            </Link>
-                            <span className='alt-link' id='new-customer-dropdown'>New customer? <Link to='/signup' id='start-here-link'>Start here.</Link></span>
-                        </div>
+                                <input className='submit-button-dropdown' type="submit" value="Sign in" />
+                            </Link> 
+                                <span className='alt-link' id='new-customer-dropdown'>New customer? <Link to='/signup' id='start-here-link'>Start here.</Link></span>
+                                </div>
+                                : ""
+                            }
+                            
+                        
                         {/* <button onClick={this.props.logout}>Log Out</button>   
                         <div>
                         <Link className="signup" to="/signup">Sign Up</Link>
                         <br/>
                         <Link className="login" to="/login">Log In</Link>
-                        </div> */}                    
+                        </div> */}   
+                        {this.props.currentUser ?                        
+                        <button className="sign-out" onClick={this.handleLogout}>
+                            Sign Out 
+                        </button> : ""
+                        }
+                       
                         </Modal>
                     </div>                
                 </div>
@@ -109,7 +133,7 @@ class Greeting extends React.Component{
             <p>
 
             </p>
-            {display}
+            {/* {this.props.currentUser ? display : ""} */}
         </div> 
         
       </div>

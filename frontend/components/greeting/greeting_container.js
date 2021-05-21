@@ -3,7 +3,7 @@ import { logout } from '../../actions/session_actions';
 import Greeting from './greeting.jsx';
 
 const mapStateToProps = (state, ownProps) => {
-
+  debugger
   return {
     currentUser: state.entities.users[state.session.id]
   }
