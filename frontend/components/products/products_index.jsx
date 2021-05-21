@@ -13,7 +13,8 @@ class ProductsIndex extends React.Component {
 
     generateRandomCard() {
 
-        let emptyArray = [];      
+        let emptyArray = [];
+      
         
         const prodRange = this.props.products.length;    
 

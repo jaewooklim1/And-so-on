@@ -8,7 +8,7 @@ import { Link, Switch } from 'react-router-dom';
 import greeting_container from "./greeting/greeting_container";
 import ProductsIndexContainer from "./products/products_index_container";
 import ProductsContainer from "./products/products_container";
-
+import PicCarousel from './carousel/carousel';  
 
 
 
@@ -23,6 +23,7 @@ const App = () => (
     </header>
     <div className='alexa-stuff' >
       <Route exact path ='/'>
+      {/* <PicCarousel></PicCarousel> */}
       <img className ="picture-ad" src="https://i.imgur.com/OjMXcyy.jpg" />      
         <div className="backgroundColorBlend"/>
       </Route>

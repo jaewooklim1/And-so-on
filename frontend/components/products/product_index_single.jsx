@@ -7,10 +7,8 @@ const ProductIndexSingle = ({ product }) => {
         <li className='product-index'>
             <Link className='product-body' to={`/products/${product.id}`}>
                 
-                <span className='index-product-title'>{product.title}</span>               
-
-                   
-                <span className='free-ship-cap'>FREE Shipping by And-So-On</span>
+                <span className='index-product-title'>{product.title}</span>
+                <span className='free-ship-text'>FREE Shipping by And-So-On</span>
             </Link>
                 <img src={product.photoUrl}/>
         </li>

@@ -106,6 +106,7 @@ class Greeting extends React.Component{
                             <div className='signin-login-dropdown'>
                             <Link to='/login'>
                                 <input className='submit-button-dropdown' type="submit" value="Sign in" />
+                                <br></br>
                             </Link> 
                                 <span className='alt-link' id='new-customer-dropdown'>New customer? <Link to='/signup' id='start-here-link'>Start here.</Link></span>
                                 </div>

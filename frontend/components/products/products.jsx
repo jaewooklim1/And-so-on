@@ -6,12 +6,12 @@ class Product extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchProduct(this.props.match.params.productId)
+        this.props.fetchProducts(this.props.match.params.productId)
     }   
 
     componentDidUpdate(prevProps) {
         if (prevProps.match.params.productId !== this.props.match.params.productId) {
-            this.props.fetchProduct();
+            this.props.fetchProducts();
         }
     };
 
@@ -34,7 +34,7 @@ class Product extends React.Component {
                     </div>
                     <div className='product-properties'>
                         <label className='price'>Price:  
-                            <span className='price-num'>  ${updatedPrice}<span className='free-ship' id='mid-text'> & FREE Shipping.</span></span>
+                            <span className='price-num'>  ${Price}<span className='free-ship'> & FREE Shipping.</span></span>
                         </label>
                         <div className='show-col1'>
                             <label className='product-show-col1'>Artist:<span>  {product.artist}</span></label>
