@@ -43,7 +43,7 @@ class SessionForm extends React.Component{
 
   demoLogin(e) {
     e.preventDefault();
-    const demoUser = { email: "andreskim@gmail.com", password: "andreskim"};
+    const demoUser = { email: "demouser12345@gmail.com", password: "demouser12345"};
     this.props.processForm(demoUser).then(demoUser => this.props.history.push('/'));
   }
 
