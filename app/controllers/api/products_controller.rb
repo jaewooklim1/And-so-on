@@ -1,13 +1,14 @@
 class Api::ProductsController < ApplicationController
 
     def index 
-        @products = keyword ? Products.search(keyword) : Products.all
-        debugger
+        # @products = keyword ? Products.search(keyword) : Products.all
+        @products = Product.all
+        # debugger
         render :index
     end
 
     def show 
-        @products = Products.find(params[:id])
+        @product = Product.find(params[:id])
         render :show
     end
 

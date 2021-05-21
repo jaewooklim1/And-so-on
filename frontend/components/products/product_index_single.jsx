@@ -12,6 +12,7 @@ const ProductIndexSingle = ({ product }) => {
                    
                 <span className='free-ship-cap'>FREE Shipping by And-So-On</span>
             </Link>
+                <img src={product.photoUrl}/>
         </li>
     )
 };

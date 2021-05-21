@@ -3,7 +3,7 @@
 }
 
 body {
-    background: white;
+    background: #EAEDED;
     padding: 0;
     margin: 0;
  }
@@ -50,14 +50,19 @@ body {
 #alexa {
     height: 1500px;
     width: 1500px;
-    left: 200px;
-    top: 102px;
-    position: fixed;
+    
     background-image: image_url('alexa_stuff.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     z-index: 0;
     // display: none;
+}
+
+.alexa-stuff {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav-mid {    
@@ -127,11 +132,9 @@ body {
 .sub-banner {
     background: #232F3E;
     color: white;
-    height: 39px;
-    top: 60px;
+    height: 39px;    
     font-style: inherit;
-    font-size: inherit;
-    position: absolute;
+    font-size: inherit;   
     width: 100%;
     min-width: 900px;
     margin: 0;

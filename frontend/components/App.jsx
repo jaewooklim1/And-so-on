@@ -8,6 +8,7 @@ import { Link, Switch } from 'react-router-dom';
 import greeting_container from "./greeting/greeting_container";
 import ProductsIndexContainer from "./products/products_index_container";
 import ProductsContainer from "./products/products_container";
+// import abc from "../../app/assets/images/alexa_stuff";
 
 
 const App = () => (
@@ -19,15 +20,18 @@ const App = () => (
       <Route exact path="/" component={greeting_container} />
       
     </header>
-    <div className="all-products">
-      <Route exact path='/:productId' component={ProductsContainer} />
-      <Route exact path='/' component={ProductsIndexContainer} />
-    </div>
+    <div className='alexa-stuff' >
+      <img src="https://i.imgur.com/OjMXcyy.jpg" />      
+        <div className="all-products">
+          <Route exact path='/:productId' component={ProductsContainer} />
+          <Route exact path='/' component={ProductsIndexContainer} />
+        </div>
+    </div> 
+   
     <div className="account-creation">
       <Switch>
         <AuthRoute exact path="/login" component={login_form_container} />
         <AuthRoute exact path="/signup" component={signup_form_container} />
-
       </Switch>
     </div>
   </div>

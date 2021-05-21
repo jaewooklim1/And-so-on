@@ -1,4 +1,5 @@
 @products.each do |product|
+    # debugger
     json.set! product.id do
         json.extract! product, :id, 
         :title, 

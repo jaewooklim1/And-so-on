@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'AmazonEmber';
+    src: url('../fonts/AmazonEmber_Bd.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.all-products {
+    position: absolute;
+    top: 355px;
+    width: 1500px;
+    z-index: 0;
+
+}
+
+.product-row-one{
+    display: flex;
+}
+
+.product-card-outline{
+    background-color: white;
+    width: 4387px;
+    height: 415px;
+    font-size: 21px;
+    font-family: "AmazonEmber";
+    border: 1px;
+    margin: 20px;
+
+    
+}
+
+.product-card-image{
+    width: 275px;
+    height: 275px;
+    padding: 29px;
+    margin: auto;
+    left: 50%;
+    
+}
+
+.card-header{
+    text-transform: capitalize;
+    // padding: 20px;
+    text-align: center;
+    padding: 12px;
+    
+}

@@ -111,9 +111,7 @@ class Greeting extends React.Component{
             </p>
             {display}
         </div> 
-        <div className='alexa-stuff' >
-            <div id='alexa' />
-        </div> 
+        
       </div>
 
       
