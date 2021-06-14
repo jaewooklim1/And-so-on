@@ -48,7 +48,7 @@ const App = () => (
             Jae-Wook Lim |
             <a
               className="creator-links"
-              href="https://www.linkedin.com/in/jae-wook-lim-430553100/"
+              href="https://www.linkedin.com/in/jae-wook-lim-93b5b8214/"
             >
               {' '}
               LinkedIn
