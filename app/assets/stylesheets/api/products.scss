@@ -1,58 +1,53 @@
 @font-face {
-    font-family: 'AmazonEmber';
-    src: url('../fonts/AmazonEmber_Bd.ttf');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'AmazonEmber';
+  src: url('../fonts/AmazonEmber_Bd.ttf');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .all-products {
-    position: absolute;
-    top: 355px;
-    width: 1500px;
-    z-index: 0;
-
+  position: absolute;
+  top: 355px;
+  width: 1500px;
+  z-index: 0;
 }
 
-.product-row-one{
-    display: flex;
+.product-row-one {
+  display: flex;
 }
 
-.product-card-outline{
-    background-color: white;
-    width: 335px;
-    height: 415px;
-    font-size: 21px;
-    font-family: "AmazonEmber";
-    border: 1px;
-    margin: 20px;
-
-    
+.product-card-outline {
+  background-color: white;
+  width: 335px;
+  height: 415px;
+  font-size: 21px;
+  font-family: 'AmazonEmber';
+  border: 1px;
+  margin: 20px;
 }
 
-.product-card-image{
-    width: 275px;
-    height: 275px;
-    padding: 29px;
-    margin: auto;
-    left: 50%;
-    
+.product-card-image {
+  width: 275px;
+  height: 275px;
+  padding: 29px;
+  margin: auto;
+  left: 50%;
 }
 
-.card-header{
-    text-transform: capitalize;
-    // padding: 20px;
-    text-align: center;
-    padding: 12px;
-    
+.card-header {
+  text-transform: capitalize;
+  // padding: 20px;
+  text-align: center;
+  padding: 12px;
 }
 
 // .picture-ad{
 //     margin-bottom: 150%;
 // }
 
-.backgroundColorBlend{
-    background-image: linear-gradient(#54757a, #eaeded);
-    height: 100px;
-    width: 1500px; 
-    margin-bottom: 800px;
+.backgroundColorBlend {
+  background-image: linear-gradient(#54757a, #eaeded);
+  height: 100px;
+  width: 1500px;
+  margin-bottom: 800px;
 }
