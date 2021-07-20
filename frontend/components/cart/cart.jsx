@@ -1,26 +1,41 @@
-import React from 'react'
-import NavBar from '../nav_bar/nav_bar_container'
+import React from "react";
 
 class Cart extends React.Component {
+  constructor(props) {
+    super(props);
 
-    componentDidMount() {
+    this.state = {
+      subtotal: 0,
+    };
 
+    this.emptyCart = this.emptyCart.bind(this);
+    this.filledCart = this.filledCart.bind(this);
+    this.updatedSubtotal = this.updatedSubtotal.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchCartItems();
+  }
+
+  componentDidUpdate(prevProps) {
+    const prev = Object.values(prevProps.userCartItems);
+    const current = Object.values(this.props.userCartItems);
+
+    if (prev.length !== current.length) {
+      this.props.fetchCartItems();
     }
+  }
 
-    render() {
+  render() {
+    console.log(this.props.cartProducts);
+    console.log(this.props);
 
-        console.log(this.props.cartProducts)
-        console.log(this.props)
-
-        return (
-            <div>
-          
-                <div>
-           
-                </div>
-            </div>
-        )
-    }
+    return (
+      <div>
+        <div></div>
+      </div>
+    );
+  }
 }
 
 export default Cart;

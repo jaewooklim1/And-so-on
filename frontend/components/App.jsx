@@ -1,15 +1,16 @@
-import React from 'react';
-import {Route} from 'react-router';
-import {ProtectedRoute, AuthRoute} from '../utils/route_util';
-import login_form_container from './session/login_form_container';
-import signup_form_container from './session/signup_form_container';
-import GreetingContainer from './greeting/greeting_container';
-import {Link, Switch} from 'react-router-dom';
-import greeting_container from './greeting/greeting_container';
-import ProductsIndexContainer from './products/products_index_container';
-import ProductsContainer from './products/products_container';
-import PicCarousel from './carousel/carousel';
-import Footer from './footer/footer';
+import React from "react";
+import { Route } from "react-router";
+import { ProtectedRoute, AuthRoute } from "../utils/route_util";
+import login_form_container from "./session/login_form_container";
+import signup_form_container from "./session/signup_form_container";
+import GreetingContainer from "./greeting/greeting_container";
+import { Link, Switch } from "react-router-dom";
+import greeting_container from "./greeting/greeting_container";
+import ProductsIndexContainer from "./products/products_index_container";
+import ProductsContainer from "./products/products_container";
+import PicCarousel from "./carousel/carousel";
+import Footer from "./footer/footer";
+import CartContainer from "./cart/cart_container";
 
 const App = () => (
   <div>
