@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Cart extends React.Component {
   constructor(props) {
@@ -35,6 +36,24 @@ class Cart extends React.Component {
         <div></div>
       </div>
     );
+  }
+
+  emptyCart() {
+    return (
+      <div className="cart-container">
+        <span className="cart-head" id="empty-cart">
+          Shopping Cart
+        </span>
+        <br></br>
+        <span className="empty-cart-message">Your Shopping Cart is empty.</span>
+      </div>
+    );
+  }
+
+  render() {
+    return Object.values(this.props.userCartItems).length === 0
+      ? this.emptyCart()
+      : this.filledCart();
   }
 }
 
