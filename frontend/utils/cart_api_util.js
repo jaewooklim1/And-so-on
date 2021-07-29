@@ -1,28 +1,28 @@
-export const fetchCartItems = () => {
+export const fetchCartProducts = () => {
   return $.ajax({
     method: "GET",
-    url: `/api/cart_items`,
+    url: `/api/carts`,
   });
 };
 
-export const fetchCartItem = (cartItemId) => {
+export const fetchCartProduct = (cartProductId) => {
   return $.ajax({
     method: "GET",
-    url: `/api/cart_items/${cartItemId}`,
+    url: `/api/carts/${cartProductId}`,
   });
 };
 
-export const createCartItem = (cartItem) => {
+export const createCartProduct = (cartProduct) => {
   return $.ajax({
     method: "POST",
-    url: `/api/cart_items`,
-    data: { cartItem },
+    url: `/api/carts`,
+    data: { cartProduct },
   });
 };
 
-export const deleteCart = (cartItemId) => {
+export const deleteCart = (cartProductId) => {
   return $.ajax({
     method: "DELETE",
-    url: `/api/cart_items/${cartItemId}`,
+    url: `/api/carts/${cartProductId}`,
   });
 };

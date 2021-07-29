@@ -1,50 +1,50 @@
 import * as CartAPIUtil from "../utils/cart_api_util";
 
-export const RECEIVE_CART_ITEM = "RECEIVE_CART_ITEM";
-export const RECEIVE_CART_ITEMS = "RECEIVE_CART_ITEMS";
-export const REMOVE_CART_ITEM = "REMOVE_CART_ITEM";
+export const RECEIVE_CART_PRODUCT = "RECEIVE_CART_PRODUCT";
+export const RECEIVE_CART_PRODUCTS = "RECEIVE_CART_PRODUCTS";
+export const REMOVE_CART_PRODUCT = "REMOVE_CART_PRODUCT";
 
-const receiveCartItems = (cartItems) => {
+const receiveCartProducts = (cartProducts) => {
   return {
-    type: RECEIVE_CART_ITEMS,
-    cartItems,
+    type: RECEIVE_CART_PRODUCTS,
+    cartProducts,
   };
 };
 
-const recieveCartItem = (cartItem) => {
+const recieveCartProduct = (cartProduct) => {
   return {
-    type: RECEIVE_CART_ITEM,
-    cartItem,
+    type: RECEIVE_CART_PRODUCT,
+    cartProduct,
   };
 };
 
-const removeCartItem = (cartItemId) => {
+const removeCartProduct = (cartProductId) => {
   return {
-    type: REMOVE_CART_ITEM,
-    cartItemId: cartItemId.id,
+    type: REMOVE_CART_PRODUCT,
+    cartProductId: cartProductId.id,
   };
 };
 
-export const fetchCartItems = () => (dispatch) => {
-  return CartAPIUtil.fetchCartItems().then((cartItems) =>
-    dispatch(receiveCartItems(cartItems))
+export const fetchCartProducts = () => (dispatch) => {
+  return CartAPIUtil.fetchCartProducts().then((cartProducts) =>
+    dispatch(receiveCartProducts(cartProducts))
   );
 };
 
-export const fetchCartItem = (cartItemId) => (dispatch) => {
-  return CartAPIUtil.fetchCartItem(cartItemId).then((cartItem) =>
-    dispatch(receiveCartItem(cartItem))
+export const fetchCartProduct = (cartProductId) => (dispatch) => {
+  return CartAPIUtil.fetchCartProduct(cartProductId).then((cartProduct) =>
+    dispatch(receiveCartProduct(cartProduct))
   );
 };
 
-export const createCartItem = (cartItem) => (dispatch) => {
-  return CartAPIUtil.createCartItem(cartItem).then((cartItem) =>
-    dispatch(recieveCartItem(cartItem))
+export const createCartProduct = (cartProduct) => (dispatch) => {
+  return CartAPIUtil.createCartProduct(cartProduct).then((cartProduct) =>
+    dispatch(recieveCartProduct(cartProduct))
   );
 };
 
-export const deleteCartItem = (cartItemId) => (dispatch) => {
-  return CartAPIUtil.deleteCartItem(cartItemId).then((cartItemId) =>
-    dispatch(removeCartItem(cartItemId))
+export const deleteCartProduct = (cartProductId) => (dispatch) => {
+  return CartAPIUtil.deleteCartProduct(cartProductId).then((cartProductId) =>
+    dispatch(removeCartProduct(cartProductId))
   );
 };

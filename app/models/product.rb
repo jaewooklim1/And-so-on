@@ -11,6 +11,9 @@ class Product < ApplicationRecord
 
     has_one_attached :photo
 
+    has_many :cart_products, class_name: "Cart", foreign_key: :product_id
+
+
     def self.search(keyword)
         self.where("title ILIKE ?", "%#{keyword}%")
     end

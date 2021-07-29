@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
 
 class Product extends React.Component {
   constructor(props) {
     super(props);
+
+    this.addToCart = this.addToCart.bind(this);
+    this.addProduct = this.addProduct.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchProduct(this.props.match.params.productId);
+    this.props.fetchProducts();
     // debugger;
   }
 
@@ -15,6 +19,40 @@ class Product extends React.Component {
       prevProps.match.params.productId !== this.props.match.params.productId
     ) {
       this.props.fetchProduct();
+    }
+  }
+
+  addProduct(currentProduct) {
+    this.props.createCartProduct({
+      user_id: this.props.sessionId,
+      product_id: currentProduct.id,
+    });
+  }
+
+  addToCart(e) {
+    e.preventDefault();
+
+    if (this.props.sessionId) {
+      debugger;
+      let { product, userCartProducts } = this.props;
+      let cartproducts = Object.values(userCartProducts);
+      let productsArr = [];
+      for (let i = 0; i < cartproducts.length; i++) {
+        productsArr.push(cartproducts[i]);
+      }
+      if (productsArr.includes(product)) {
+        return (
+          <div>
+            <span className="already-added-message">
+              already added to your cart
+            </span>
+          </div>
+        );
+      } else {
+        this.addProduct(product);
+      }
+    } else {
+      this.props.history.push("/login");
     }
   }
 
@@ -63,7 +101,7 @@ class Product extends React.Component {
                   <div className="price-label">
                     Price:
                     <span className="Price and Shipping">
-                      {' '}
+                      {" "}
                       ${product.price}
                       <br></br>
                     </span>
@@ -91,7 +129,16 @@ class Product extends React.Component {
                     </div>
                   </div>
                   <div className="buybox-button">
-                    <button type="button">Add to Cart</button>
+                    <button className="add-to-cart" onClick={this.addToCart}>
+                      {/* <img
+                        className="cart-logo"
+                        src="https://i.imgur.com/9pUQTdZ.png"
+                      ></img>{" "} */}
+                      Add to Cart
+                      <div className="product-added">
+                        <span className="check-mark">✓</span> Added to Cart
+                      </div>
+                    </button>
                     <div className="buybox-info">
                       <ul>Secure transaction</ul>
                       <br></br>
