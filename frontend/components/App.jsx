@@ -11,6 +11,7 @@ import ProductsContainer from "./products/products_container";
 import PicCarousel from "./carousel/carousel";
 import Footer from "./footer/footer";
 import CartContainer from "./cart/cart_container";
+import SearchResultContainer from "./search/search_result_container";
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
       </Link>
       <Route exact path="/" component={greeting_container} />
       <Route path="/products/" component={greeting_container} />
+      <Route path="/search/" component={greeting_container} />
     </header>
     <div className="alexa-stuff">
       <Route exact path="/">
@@ -33,7 +35,7 @@ const App = () => (
         <Route exact path="/" component={ProductsIndexContainer} />
       </div>
     </div>
-
+    <Route path="/search/" component={SearchResultContainer}></Route>
     <div className="account-creation">
       <Switch>
         <AuthRoute exact path="/login" component={login_form_container} />
@@ -43,6 +45,7 @@ const App = () => (
 
     <Route exact path="/" component={Footer} />
     <Route path="/products/" component={Footer} />
+    <Route path="/search/" component={Footer} />
   </div>
 );
 

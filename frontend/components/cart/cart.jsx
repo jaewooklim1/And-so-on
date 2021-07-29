@@ -6,7 +6,7 @@ class Cart extends React.Component {
     super(props);
 
     this.state = {
-      subtotal: 0,
+      total: 0,
     };
 
     this.emptyCart = this.emptyCart.bind(this);
@@ -48,12 +48,6 @@ class Cart extends React.Component {
         <span className="empty-cart-message">Your Shopping Cart is empty.</span>
       </div>
     );
-  }
-
-  render() {
-    return Object.values(this.props.userCartItems).length === 0
-      ? this.emptyCart()
-      : this.filledCart();
   }
 }
 

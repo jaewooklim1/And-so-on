@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-import Search from "./search";
+import SearchResult from "./search_result";
 import { fetchProducts } from "../../actions/product_actions";
+import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state) => {
   return {
@@ -16,4 +16,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(SearchResult)
+);
