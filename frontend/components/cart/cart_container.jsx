@@ -1,26 +1,28 @@
 import { connect } from "react-redux";
-import Cart from "./cart";
+import CartProducts from "./cart_products";
 import {
-  fetchCartItem,
-  fetchCartItems,
-  deleteCartItem,
-  createCartItem,
+  fetchCartProduct,
+  fetchCartProducts,
+  deleteCartProduct,
+  createCartProduct,
 } from "../../actions/cart_actions";
 
 const mapStateToProps = (state) => {
   return {
-    userCartItems: state.entities.cartItems,
+    userCartProducts: state.entities.cartProducts,
     curentUserId: state.session.id,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchCartItems: () => dispatch(fetchCartItems()),
-    fetchCartItem: (cartItem) => dispatch(fetchCartItem(cartItem)),
-    createCartItem: (cartItem) => dispatch(createCartItem(cartItem)),
-    deleteCartItem: (cartItemId) => dispatch(deleteCartItem(cartItemId)),
+    fetchCartProducts: () => dispatch(fetchCartProducts()),
+    fetchCartProduct: (cartProduct) => dispatch(fetchCartProduct(cartProduct)),
+    createCartProduct: (cartProduct) =>
+      dispatch(createCartProduct(cartProduct)),
+    deleteCartProduct: (cartProductId) =>
+      dispatch(deleteCartProduct(cartProductId)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(CartProducts);

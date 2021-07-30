@@ -20,7 +20,7 @@ export const createCartProduct = (cartProduct) => {
   });
 };
 
-export const deleteCart = (cartProductId) => {
+export const deleteCartProduct = (cartProductId) => {
   return $.ajax({
     method: "DELETE",
     url: `/api/carts/${cartProductId}`,

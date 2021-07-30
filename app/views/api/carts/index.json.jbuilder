@@ -3,9 +3,9 @@
         json.extract! product.products, :id, 
         :title, 
         :info,
-        :ownder_id, 
+        :owner_id, 
         :price, 
-        :category,  
+        :category
         json.photoUrl url_for(product.products.photo)
     end
 end

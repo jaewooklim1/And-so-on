@@ -77,7 +77,7 @@ class Product extends React.Component {
               </span>
             </div>
           </div>
-          <div className="split center-product-column">
+          <div className="split-center-product-column">
             <div className="product-text-container">
               <div className="product-title-header">
                 <h1 className="product-title">{product.title}</h1>
@@ -88,7 +88,14 @@ class Product extends React.Component {
                   <label className="product-label" id="about">
                     {/* About this product */}
                     <br></br>
-                    <span id="description">{product.info}</span>
+                    <ul className="product-label-description">
+                      {product.info}
+                    </ul>
+                    <br></br>
+
+                    <ul className="product-label-price">
+                      Price : {product.price}
+                    </ul>
                   </label>
                 </div>
               </div>

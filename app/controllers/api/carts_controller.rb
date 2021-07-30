@@ -1,7 +1,7 @@
 class Api::CartsController < ApplicationController
     
     def create
-        @cart_product = CartProduct.new(cart_product_params)
+        @cart_product = Cart_Product.new(cart_product_params)
         if @cart_product.save
             render :show
         else
@@ -10,7 +10,7 @@ class Api::CartsController < ApplicationController
     end
 
     def show
-        @cart_product = CartProduct.find(params[:id])
+        @cart_product = Cart_Product.find(params[:id])
     end
     
     def index 
@@ -18,7 +18,7 @@ class Api::CartsController < ApplicationController
     end
 
     def destroy
-        @cart_product = CartProduct.find(params[:id])
+        @cart_product = Cart_Product.find(params[:id])
         @cart_product.destroy 
         render :show
     end

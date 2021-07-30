@@ -1,8 +1,13 @@
 @font-face {
-  font-family: 'AmazonEmber';
-  src: url('../fonts/AmazonEmber_Bd.ttf');
+  font-family: "AmazonEmber";
+  src: url("../fonts/AmazonEmber_Bd.ttf");
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: Amazon;
+  src: url(../fonts/AmazonEmber_Rg);
 }
 
 .all-products {
@@ -10,10 +15,12 @@
   top: 355px;
   width: 1500px;
   z-index: 0;
+  font-family: Amazon;
 }
 
 .product-row-one {
   display: flex;
+  font-family: Amazon;
 }
 
 .product-card-outline {
@@ -21,9 +28,10 @@
   width: 335px;
   height: 415px;
   font-size: 21px;
-  font-family: 'AmazonEmber';
+  font-family: "AmazonEmber";
   border: 1px;
   margin: 20px;
+  font-family: Amazon;
 }
 
 .product-card-image {
@@ -32,6 +40,7 @@
   padding: 29px;
   margin: auto;
   left: 50%;
+  font-family: Amazon, Arial;
 }
 
 .card-header {
@@ -39,6 +48,20 @@
   // padding: 20px;
   text-align: center;
   padding: 12px;
+  font-family: Amazon;
+  text-decoration: none;
+}
+
+.product-card-container {
+  text-decoration: none;
+}
+
+.cart_items {
+  text-decoration: none;
+}
+
+.cart-index-item {
+  text-decoration: none;
 }
 
 // .picture-ad{
@@ -50,12 +73,14 @@
   height: 100px;
   width: 1500px;
   margin-bottom: 800px;
+  font-family: Amazon;
 }
 
 .product-page {
   background-color: white;
   width: 1750px;
   height: 1200px;
+  font-family: Amazon;
 }
 
 .product-category {
@@ -65,6 +90,7 @@
   font-size: 25px;
   font-weight: bold;
   white-space: nowrap;
+  font-family: Amazon;
 }
 
 .product-show {
@@ -73,8 +99,20 @@
   width: 100%;
   display: flex;
   padding-top: 38px;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   z-index: -1;
+}
+
+.product-label-description {
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+  font-family: Amazon;
+}
+
+.product-label-price {
+  padding-top: 50px;
+  color: red;
+  font-family: Amazon;
 }
 
 .product-photo {
@@ -86,13 +124,14 @@
   display: block;
   color: black;
   z-index: 0;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   margin-left: -120px;
   margin-top: 150px;
   font-size: 250px;
   width: 150px;
   // overflow: hidden;
   white-space: nowrap;
+  font-family: Amazon;
 }
 
 .product-title {
@@ -100,16 +139,23 @@
   margin-left: 180px;
   margin-top: 80px;
   // width: 150px;
+  font-family: Amazon;
 }
 
 .product-description {
   margin-left: 50px;
+  font-family: Amazon;
 }
 
 .product-properties {
   float: right;
   margin: 0 0 22px 20px;
   width: 270px;
+  font-family: Amazon;
+}
+
+.split-center-product-column {
+  min-width: 500px;
 }
 
 .split {
@@ -128,7 +174,7 @@
   border-width: 2px;
   // box-shadow: 0 0 0 4px;
   height: 550px;
-  font-family: 'Amazon Ember', Arial, sans-serif;
+  font-family: Amazon, "Amazon Ember", Arial, sans-serif;
 }
 
 // .strong {
@@ -186,6 +232,7 @@
   width: 185px;
   align-items: center;
   height: 25px;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
 }
 
 .buybox-button {
@@ -226,6 +273,19 @@
 //   right: 0;
 //   background-color: green;
 // }
+
+.product-added {
+  margin-top: 5px;
+}
+
+.add-to-cart:focus .item-added {
+  display: flex;
+}
+
+.check-mark {
+  font-size: 20px;
+  margin-right: 8px;
+}
 
 .product-img-container {
   //   min-width: 1400px;

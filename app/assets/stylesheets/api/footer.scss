@@ -1,83 +1,91 @@
+@font-face {
+  font-family: Amazon;
+  src: url(../fonts/AmazonEmber_Rg);
+}
+
 .footer {
-    bottom: 0;
-    width: 100%;
-    min-width: 905px;
-    height: 250px;
-    background-color: #242f3e;
-    display: block;
-    float: bottom;
+  bottom: 0;
+  width: 100%;
+  min-width: 905px;
+  height: 250px;
+  background-color: #242f3e;
+  display: block;
+  float: bottom;
+  font-family: Amazon;
 }
 
 .back-to-top {
-    display: block;
-    color: #fefefe;
-    height: 32px;
-    background-color: #37475a;
-    text-align: center;
-    padding-top: 18px;
-    font-family: "";
-    font-size: 13px;
+  display: block;
+  color: #fefefe;
+  height: 32px;
+  background-color: #37475a;
+  text-align: center;
+  padding-top: 18px;
+  font-family: "";
+  font-size: 13px;
+  font-family: Amazon;
 }
 
 .back-to-top:hover {
-    cursor: pointer;
-    background: #485769;
+  cursor: pointer;
+  background: #485769;
 }
 
-
 .sub-bottom-footer {
-    padding: 33px 0px;
-    display: flex;
-    justify-content: center;
+  padding: 33px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .get-to-know {
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    width: 500px;
-    display: block;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  width: 500px;
+  display: block;
+  text-align: center;
+  font-family: Amazon;
+  li {
+    font-size: 12px;
+    font-family: inherit;
+    color: #dddddd;
+    list-style-type: none;
+    position: relative;
+    padding: 4px 5px 5px 9px;
+    text-align: left;
+    font-weight: normal;
+  }
+  #first {
+    padding: 15px 5px 5px 9px;
     text-align: center;
-    li {
-        font-size: 12px;
-        font-family: inherit;
-        color: #dddddd;
-        list-style-type: none;
-        position: relative;
-        padding: 4px 5px 5px 9px;
-        text-align: left;
-        font-weight: normal;
-    }
-    #first {
-        padding: 15px 5px 5px 9px;
-        text-align: center;
-        font-family: inherit;
-    }
-    .creator-links {
-        text-decoration: none;
-        color: #dddddd;
-        font-family: inherit;
-    }
-    .creator-links:hover {
-        text-decoration: underline;
-        cursor: pointer;
-    }
+    font-family: inherit;
+  }
+  .creator-links {
+    text-decoration: none;
+    color: #dddddd;
+    font-family: inherit;
+  }
+  .creator-links:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 .bottom-footer {
-    background-color: #242f3e;
-    border-top: 1px solid #3a4553;
-    position: 0;
-    bottom: 0;
-    height: 80px;
-    display: flex;
-    justify-content: center;
- 
-    .and-so-on-logo {
-        height: 25px;
-        width: 50px;       
-        background-size: contain;
-        background-repeat: none;
-        margin-top: 25px;
-    }
+  background-color: #242f3e;
+  border-top: 1px solid #3a4553;
+  position: 0;
+  bottom: 0;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  font-family: Amazon;
+
+  .and-so-on-logo {
+    height: 25px;
+    width: 50px;
+    background-size: contain;
+    background-repeat: none;
+    margin-top: 25px;
+  }
 }

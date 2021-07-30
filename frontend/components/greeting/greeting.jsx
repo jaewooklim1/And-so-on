@@ -16,12 +16,12 @@ const customStyles = {
 
   content: {
     top: "13%",
-    left: "95%",
+    left: "88%",
     right: "auto",
     bottom: "auto",
-    marginRight: "-50%",
+    marginRight: "-60%",
     transform: "translate(-50%, -50%)",
-    width: "100px",
+    width: "150px",
     height: "100px",
     background: "white",
     position: "relative",
@@ -67,7 +67,9 @@ class Greeting extends React.Component {
         <div className="nav-belt">
           <div className="nav-left">
             <div className="header-logo">
-              <div id="and-so-on-logo" />
+              <Link to="/">
+                <div id="and-so-on-logo" />
+              </Link>
             </div>
           </div>
           <div className="nav-mid">
@@ -82,17 +84,19 @@ class Greeting extends React.Component {
               onMouseLeave={this.closeModal}
             >
               {!this.props.currentUser ? (
-                <Link to="/login">
-                  <button className="account-container">
-                    <span className="first-navigation-line">
-                      Please sign in
-                    </span>
-                    <br></br>
-                    <span className="second-navigation-line">
-                      Account & Lists ▾
-                    </span>
-                  </button>
-                </Link>
+                <div className="sign-in-greeting">
+                  <Link to="/login">
+                    <button className="account-container">
+                      <span className="first-navigation-line">
+                        Hello, Sign in
+                      </span>
+                      <br></br>
+                      <span className="second-navigation-line">
+                        Account & Lists ▾
+                      </span>
+                    </button>
+                  </Link>
+                </div>
               ) : (
                 <div className="user-signed-in">
                   Hello {this.props.currentUser.email}
@@ -146,6 +150,15 @@ class Greeting extends React.Component {
                   ""
                 )}
               </Modal>
+            </div>
+            <div className="cart-icon">
+              <Link to="/cart_products">
+                <img
+                  className="cart-picture"
+                  src="https://i.imgur.com/LpGaVU7.png"
+                ></img>
+              </Link>
+              <div className="cart-word">Cart</div>
             </div>
           </div>
         </div>

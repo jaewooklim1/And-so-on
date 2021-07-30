@@ -4,6 +4,8 @@ import {
   REMOVE_CART_PRODUCT,
 } from "../actions/cart_actions";
 
+import { LOGOUT_CURRENT_USER } from "../actions/session_actions";
+
 const cartReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState = Object.assign({}, state);
@@ -17,7 +19,8 @@ const cartReducer = (state = {}, action) => {
     case REMOVE_CART_PRODUCT:
       delete newState[action.cartProductId];
       return newState;
-
+    case LOGOUT_CURRENT_USER:
+      return {};
     default:
       return state;
   }

@@ -1,7 +1,7 @@
-import React from 'react';
-import ProductIndexSingle from './product_index_single';
-import Grid from '@material-ui/core/Grid';
-import {Link} from 'react-router-dom';
+import React from "react";
+import ProductIndexSingle from "./product_index_single";
+import Grid from "@material-ui/core/Grid";
+import { Link } from "react-router-dom";
 
 class ProductsIndex extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class ProductsIndex extends React.Component {
 
     debugger;
 
-    const {products} = this.props;
+    const { products } = this.props;
     const prodVal = Object.values(products);
     return emptyArray.map((i) => {
       return (
@@ -42,7 +42,7 @@ class ProductsIndex extends React.Component {
           <Grid item>
             <div className="product-card-container">
               <div className="product-card-outline">
-                <h1 className="card-header">{prodVal[i].category}</h1>
+                <div className="card-header">{prodVal[i].category}</div>
                 <img className="product-card-image" src={prodVal[i].photoUrl} />
               </div>
             </div>
@@ -60,12 +60,12 @@ class ProductsIndex extends React.Component {
 
   render() {
     // debugger
-    const {products} = this.props;
+    const { products } = this.props;
 
     return (
       <div className="product-index">
         <Grid container>
-          {Object.values(products).length > 0 ? this.generateRandomCard() : ''}
+          {Object.values(products).length > 0 ? this.generateRandomCard() : ""}
         </Grid>
       </div>
     );

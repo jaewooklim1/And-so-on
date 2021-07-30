@@ -22,6 +22,7 @@ const App = () => (
       <Route exact path="/" component={greeting_container} />
       <Route path="/products/" component={greeting_container} />
       <Route path="/search/" component={greeting_container} />
+      <Route path="/cart_products/" component={greeting_container} />
     </header>
     <div className="alexa-stuff">
       <Route exact path="/">
@@ -35,6 +36,8 @@ const App = () => (
         <Route exact path="/" component={ProductsIndexContainer} />
       </div>
     </div>
+    <Route path="/cart_products/" component={CartContainer}></Route>
+
     <Route path="/search/" component={SearchResultContainer}></Route>
     <div className="account-creation">
       <Switch>
@@ -46,6 +49,7 @@ const App = () => (
     <Route exact path="/" component={Footer} />
     <Route path="/products/" component={Footer} />
     <Route path="/search/" component={Footer} />
+    <Route path="/cart_products/" component={Footer} />
   </div>
 );
 

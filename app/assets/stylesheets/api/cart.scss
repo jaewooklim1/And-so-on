@@ -1,0 +1,87 @@
+.body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: Amazon;
+  src: url(../fonts/AmazonEmber_Rg);
+}
+
+.cart-header {
+  font-family: Amazon;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  border-bottom: 1px solid gray;
+  width: 1400px;
+  margin-bottom: 15px;
+}
+
+.left-side-cart {
+  margin-left: 150px;
+}
+
+.cart-container {
+  display: flex;
+  background-color: #eaeded;
+  min-height: 750px;
+  padding: 14px 18px 18px;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.inner-cart-container {
+  background-color: white;
+  width: 1650px;
+  min-height: 300px;
+  margin-top: 50px;
+  margin-left: 70px;
+  z-index: 5;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.empty-cart-message {
+  float: left;
+  display: flex;
+  margin-top: 150px;
+  background-color: white;
+  margin-right: 150px;
+  margin-left: 50px;
+  width: 1500px;
+  font-family: Amazon;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.cart-product-photo {
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  // float: left;
+  flex: 33%;
+}
+
+.cart-item-title {
+  display: flex;
+  flex-direction: row;
+  // float: left;
+  flex: 33%;
+}
+
+.in-stock-cart {
+  display: flex;
+  flex: 33%;
+  // float: left;
+}
+
+.empty-cart-gif {
+  max-height: 323px;
+  max-width: 277px;
+}
