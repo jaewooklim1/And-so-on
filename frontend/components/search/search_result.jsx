@@ -32,16 +32,24 @@ class SearchResult extends React.Component {
   }
 
   render() {
+    // const { products } = this.props;
+    // const prodVal = Object.values(products);
     return (
       <div className="search-result-container">
         {this.state.searchResult.map((searchItem) => {
           return (
-            <div className="searchItem-display">
-              <img src={searchItem.photoUrl}></img>
-              <div className="searchItem-description">
-                <h1>{searchItem.title}</h1>
-                {searchItem.info}
-              </div>
+            <div class="row" className="searchItem-display">
+              <Link to={`/products/${searchItem.id}`}>
+                <div class="column" className="searchItem-image">
+                  <img src={searchItem.photoUrl}></img>
+                </div>
+                <div class="column" className="searchItem-description">
+                  <h1>
+                    {searchItem.title} - {searchItem.info}
+                  </h1>
+                  <ul>{searchItem.price}</ul>
+                </div>
+              </Link>
             </div>
           );
         })}

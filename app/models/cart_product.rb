@@ -1,4 +1,4 @@
-class CartProduct < ApplicationRecord
+class Cart_Product < ApplicationRecord
     validates :user_id, :product_id, presence: true
 
     belongs_to :users, 

@@ -1,90 +1,106 @@
+@font-face {
+  font-family: Amazon;
+  src: url(../fonts/AmazonEmber_Rg);
+}
+
 body {
-    background: white;
-    padding: 0;
-    margin: 0;
-    height: 1500px;
- }
+  background: white;
+  padding: 0;
+  margin: 0;
+  height: 1500px;
+  font-family: Amazon;
+}
 
 .sign-up {
-    margin-bottom: 325px;
+  margin-bottom: 325px;
 }
 
 .sign-in {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    margin: 0;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 0;
-    
+  width: 100%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 0;
+  font-family: Amazon;
 }
 
 #and-so-on-logo-dark {
-    height: 80px;
-    width: 115px;
-    margin-top: 10px;
-    margin-left: 10px;
-    background-image: image_url('and-so-on-black.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
+  height: 80px;
+  width: 115px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-image: image_url("and-so-on-black.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.mid-signup-section{
-    border: 1px #ddd solid;    
-    border-radius: 4px;
-    display: block;
-    margin: auto;
-    width: 315px;
-    min-height: 295px;
-    text-align: left;
-    padding: 15px 15px 15px 15px;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    color: #111111;
-    font-size: 13px;
-    font-weight: bold;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    top: 30px;
-    margin-left: 41.5%;
-    // margin-right: 57.5%;
+.mid-signup-section {
+  border: 1px #ddd solid;
+  border-radius: 4px;
+  display: block;
+  margin: auto;
+  width: 315px;
+  min-height: 295px;
+  text-align: left;
+  padding: 15px 15px 15px 15px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: #111111;
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 30px;
+  margin-left: 41.5%;
+  // margin-right: 57.5%;
+  font-family: Amazon;
 }
 
 .header-text {
-    font-weight: 100;
-    font-size: 20px;
-    padding: 5px;
+  font-weight: 100;
+  font-size: 20px;
+  padding: 5px;
+  font-family: Amazon;
 }
 
 .input-info {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Amazon;
 }
 
-.email-text, .password-text, .re-enter-password-text, .username-text {
-    width: 309px;
+.email-text,
+.password-text,
+.re-enter-password-text,
+.username-text {
+  width: 309px;
+  font-family: Amazon;
 }
 
 .submit-button {
-    width: 318px;
-    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
-    display: block;
-    position: relative;
-    overflow: hidden;
-    height: 29px;    
-    border-radius: 2px;
+  width: 318px;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 29px;
+  border-radius: 2px;
+  font-family: Amazon;
 }
 
 .form-errors {
-    font-size: 10px;
-    color: red;
-    padding: 1px;
+  font-size: 10px;
+  color: red;
+  padding: 1px;
+  font-family: Amazon;
 }
 
 .terms-of-conditions {
-    font-size: 10px;
-    font-weight: 100;
+  font-size: 10px;
+  font-weight: 100;
+  font-family: Amazon;
 }
