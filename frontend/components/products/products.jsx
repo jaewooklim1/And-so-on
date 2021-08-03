@@ -131,7 +131,7 @@ class Product extends React.Component {
                         aria-hidden="true"
                         id="a-autoid-0-announce"
                       >
-                        <span class="a-dropdown-label">Qty:</span>
+                        <span class="a-dropdown-label">Qty: </span>
                         <span class="a-dropdown-prompt">1</span>
                       </span>
                     </div>

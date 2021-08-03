@@ -35,6 +35,16 @@ const App = () => (
       <div className="all-products">
         <Route exact path="/" component={ProductsIndexContainer} />
       </div>
+      <Route exact path="/">
+        <div className="picture-ad-2">
+          <div className="backgroundColorBlendTwo" />
+          <img
+            className="picture-ad-2-img"
+            src="https://i.imgur.com/wpocdDT.jpg"
+          />
+          <div className="backgroundColorBlendThree" />
+        </div>
+      </Route>
     </div>
     <Route path="/cart_products/" component={CartContainer}></Route>
 
