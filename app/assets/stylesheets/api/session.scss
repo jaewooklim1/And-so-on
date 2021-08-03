@@ -26,6 +26,23 @@ body {
   font-family: Amazon;
 }
 
+.header-logo {
+  margin-top: 2px;
+  height: 50px;
+  width: 150px;
+}
+
+.header-logo:active,
+.header-logo:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+  outline: none;
+}
+
+.header-logo:focus {
+  outline: none;
+}
+
 #and-so-on-logo-dark {
   height: 80px;
   width: 115px;

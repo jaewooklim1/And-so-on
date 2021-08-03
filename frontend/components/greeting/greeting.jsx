@@ -151,15 +151,15 @@ class Greeting extends React.Component {
                 )}
               </Modal>
             </div>
-            <div className="cart-icon">
-              <Link to="/cart_products">
+            <Link to="/cart_products">
+              <div className="cart-icon">
                 <img
                   className="cart-picture"
                   src="https://i.imgur.com/LpGaVU7.png"
                 ></img>
-              </Link>
-              <div className="cart-word">Cart</div>
-            </div>
+                <div className="cart-word">Cart</div>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="sub-banner">

@@ -9,6 +9,8 @@ class SearchResult extends React.Component {
     super(props);
 
     this.state = { searchResult: [] };
+    this.searchResultGood = this.searchResultGood.bind(this);
+    this.searchResultBad = this.searchResultBad.bind(this);
   }
 
   async componentDidMount() {
@@ -29,9 +31,10 @@ class SearchResult extends React.Component {
     this.setState({ searchResult: result });
     console.log(this.state);
     console.log(result);
+    console.log(searchResult);
   }
 
-  render() {
+  searchResultGood() {
     // const { products } = this.props;
     // const prodVal = Object.values(products);
     return (
@@ -55,6 +58,20 @@ class SearchResult extends React.Component {
         })}
       </div>
     );
+  }
+
+  searchResultBad() {
+    return (
+      <div className="search-result-container">
+        No result, please try another
+      </div>
+    );
+  }
+
+  render() {
+    return this.props.searchResult.length === 0
+      ? this.searchResultBad()
+      : this.searchResultGood();
   }
 }
 

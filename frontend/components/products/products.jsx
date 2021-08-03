@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Product extends React.Component {
   constructor(props) {
@@ -142,11 +143,13 @@ class Product extends React.Component {
                         src="https://i.imgur.com/9pUQTdZ.png"
                       ></img>{" "} */}
                       Add to Cart
-                      <div className="product-added">
+                      {/* <div className="product-added">
                         <span className="check-mark">✓</span> Added to Cart
-                      </div>
+                      </div> */}
                     </button>
+
                     <div className="buybox-info">
+                      <br></br>
                       <ul>Secure transaction</ul>
                       <br></br>
                       <ul>Ships from And-So-On</ul>

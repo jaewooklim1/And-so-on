@@ -101,7 +101,19 @@
 
 .account-dropdown {
   display: flex;
+
   // justify-content: end;
+}
+
+.account-dropdown:active,
+.account-dropdown:hover {
+  border: 1px solid white;
+  border-radius: 3px;
+  outline: none;
+}
+
+.account-dropdown:focus {
+  outline: none;
 }
 
 .w3review {
@@ -149,21 +161,10 @@
   border: 1px solid transparent;
   //   text-decoration: underliasne;
   width: 150px;
-  height: 50px;
+  height: 45px;
   margin-top: 7px;
   float: left;
   font-family: Amazon;
-}
-
-.account-container:active,
-.account-container:hover {
-  border: 1px solid white;
-  border-radius: 3px;
-  outline: none;
-}
-
-.account-container:focus {
-  outline: none;
 }
 
 .cart-icon {
@@ -213,6 +214,17 @@
   padding-right: 15px;
 }
 
+.user-signed-in :active,
+.user-signed-in :hover {
+  border: 1px solid white;
+  border-radius: 3px;
+  outline: none;
+}
+
+.user-signed-in :focus {
+  outline: none;
+}
+
 .submit-button-dropdown,
 .sign-out {
   background-image: linear-gradient(
@@ -227,4 +239,5 @@
   height: 32px;
   border-radius: 3px;
   margin-bottom: 15px;
+  font-family: Amazon;
 }
