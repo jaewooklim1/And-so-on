@@ -240,7 +240,7 @@
 }
 
 .user-signed-in :active,
-.user-signed-in :hover {
+.user-signed-in :not(span) :hover {
   border: 1px solid white;
   border-radius: 3px;
   outline: none;

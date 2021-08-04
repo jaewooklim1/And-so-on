@@ -1,12 +1,52 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Modal from "react-modal";
+
+Modal.setAppElement(document.getElementById("root"));
+
+const customStyles = {
+  overlay: {
+    background: "rgb(0, 0, 0, 0.5)",
+    // opacity: "0.5",
+    filter: "Alpha(Opacity=50)",
+  },
+
+  content: {
+    top: "13%",
+    left: "88%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-60%",
+    transform: "translate(-50%, -50%)",
+    width: "150px",
+    height: "100px",
+    background: "white",
+    position: "relative",
+    opacity: "1 !important",
+  },
+};
 
 class Product extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      setIsOpen: false,
+      modalIsOpen: false,
+    };
 
     this.addToCart = this.addToCart.bind(this);
     this.addProduct = this.addProduct.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    // debugger
+    this.setState({ modalIsOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: false });
   }
 
   componentDidMount() {
@@ -137,16 +177,30 @@ class Product extends React.Component {
                     </div>
                   </div>
                   <div className="buybox-button">
-                    <button className="add-to-cart" onClick={this.addToCart}>
-                      {/* <img
+                    <div
+                      className="cart-purchase"
+                      onMouseClick={this.openModal}
+                    >
+                      <button className="add-to-cart" onClick={this.addToCart}>
+                        {/* <img
                         className="cart-logo"
                         src="https://i.imgur.com/9pUQTdZ.png"
                       ></img>{" "} */}
-                      Add to Cart
-                      {/* <div className="product-added">
+                        Add to Cart
+                        {/* <div className="product-added">
                         <span className="check-mark">✓</span> Added to Cart
                       </div> */}
-                    </button>
+                      </button>
+                      <Modal
+                        isOpen={this.state.modalIsOpen}
+                        onRequestClose={this.closeModal}
+                        style={customStyles}
+                        contentLabel="Example Modal"
+                        ariaHideApp={false}
+                      >
+                        {" "}
+                      </Modal>
+                    </div>
 
                     <div className="buybox-info">
                       <br></br>

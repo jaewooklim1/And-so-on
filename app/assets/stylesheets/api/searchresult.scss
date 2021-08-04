@@ -1,0 +1,77 @@
+@font-face {
+  font-family: Amazon;
+  src: url(../fonts/AmazonEmber_Rg);
+}
+
+.body {
+  height: 400px;
+}
+
+.search-result-container {
+  display: flex;
+  font-family: Amazon;
+  height: 700px;
+  align-items: center;
+}
+
+.empty-search-text {
+  font-size: 50px;
+}
+
+.searchItem-display {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin-left: 250px;
+  border-top: 1px solid gray;
+  margin-top: 150px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  color: black;
+  font-family: Amazon;
+}
+
+.searchItem-image {
+  display: flex;
+  float: left;
+}
+
+.searchItem-description {
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+  top: 150px;
+  float: right;
+  font-size: 25px;
+  color: black;
+  font-family: Amazon;
+}
+
+.searchItem-description > h1 {
+  margin-bottom: 25px;
+  color: black;
+}
+
+.searchItem-description > .column {
+  float: left;
+  width: 50%;
+  color: black;
+}
+
+.searchItem-description > .row {
+  content: "";
+  display: table;
+  clear: both;
+  color: black;
+}
+
+.searchItem-image > img {
+  height: 143px;
+  width: 231px;
+  float: left;
+  color: black;
+}
+
+.search-price {
+  color: red;
+}

@@ -50,7 +50,7 @@ class SearchResult extends React.Component {
                   <h1>
                     {searchItem.title} - {searchItem.info}
                   </h1>
-                  <ul>{searchItem.price}</ul>
+                  <ul className="search-price">{searchItem.price}</ul>
                 </div>
               </Link>
             </div>
@@ -63,13 +63,17 @@ class SearchResult extends React.Component {
   searchResultBad() {
     return (
       <div className="search-result-container">
-        No result, please try another
+        <img src="https://i.imgur.com/7lgVtA3.gif"></img>
+        <div className="empty-search-text">
+          {" "}
+          No results found, please try another
+        </div>
       </div>
     );
   }
 
   render() {
-    return this.props.searchResult.length === 0
+    return this.state.searchResult.length === 0
       ? this.searchResultBad()
       : this.searchResultGood();
   }
