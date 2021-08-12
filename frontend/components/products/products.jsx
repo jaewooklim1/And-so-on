@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
+import ReviewPage from "../reviews/review_index_container";
 
 Modal.setAppElement(document.getElementById("root"));
 
@@ -216,6 +217,7 @@ class Product extends React.Component {
             </div>
           </div>
         </div>
+        <ReviewPage productId={this.props.product.id}></ReviewPage>
       </div>
     );
   }

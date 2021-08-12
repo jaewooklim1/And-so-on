@@ -13,6 +13,8 @@ class Product < ApplicationRecord
 
     has_many :cart_products, class_name: "Cart", foreign_key: :product_id
 
+    has_many :reviews, class_name: :Review, primary_key: :id, foreign_key: :product_id
+
 
     def self.search(keyword)
         self.where("title ILIKE ?", "%#{keyword}%")

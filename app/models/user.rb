@@ -20,6 +20,12 @@ class User < ApplicationRecord
     class_name: "Cart_Product", 
     foreign_key: :user_id
 
+    has_many :authored_reviews,
+    class_name: :Review,
+    primary_key: :id,
+    foreign_key: :user_id
+
+ 
     after_initialize :ensure_session_token
 
     def self.find_by_credentials(email, password)

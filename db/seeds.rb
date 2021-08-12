@@ -89,6 +89,11 @@ file15 = open('./app/assets/images/treadmill.jpg')
 product15.photo.attach(io: file15, filename: 'treadmill.jpg')
 product15.save!
 
+demouser = User.create!(email: "Demouser12345@gmail.com", username: "Demouser", password_digest: "Demouser12345")
+demouser.save!
+
+
+
 # product16 = Product.create!(title: "Fitbyte", info: "Fitbit Inspire 2 Health & Fitness Tracker", owner_id: "2", price: "98.99", category: "Exercise")
 
 # product17 = Product.create!(title: "Earbuds (2nd Gen)", info: "Wireless earbuds with active noise cancellation and Alexa", owner_id: "4", price: "119.99", category: "electronics")
