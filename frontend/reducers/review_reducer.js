@@ -10,7 +10,7 @@ const ReviewsReducer = (state = {}, action) => {
   let newState = Object.assign({}, state);
   switch (action.type) {
     case RECEIVE_REVIEWS:
-      return merge({}, action.reviews);
+      return Object.assign({}, state, action.reviews);
     case RECEIVE_REVIEW:
       debugger;
       return Object.assign({}, state, action.review);

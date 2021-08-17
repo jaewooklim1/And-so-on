@@ -36,6 +36,9 @@
 
 .review-right {
   float: right;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .review-right-title {

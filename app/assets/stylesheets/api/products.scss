@@ -80,10 +80,14 @@
   font-family: Amazon;
 }
 
+.product-text-container {
+  max-width: 590px;
+}
+
 .product-page {
   background-color: white;
   width: 1750px;
-  height: 1200px;
+  height: 1500px;
   font-family: Amazon;
 }
 
@@ -129,7 +133,7 @@
   color: black;
   z-index: 0;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  margin-left: -120px;
+  margin-left: -132px;
   margin-top: 150px;
   font-size: 250px;
   width: 150px;

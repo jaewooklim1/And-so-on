@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import ReviewForm from "../reviews/review_index_container";
 import ReviewContainer from "../reviews/review_container";
 import NewReview from "../reviews/review_container";
+import createHistory from "history/createBrowserHistory";
 
 Modal.setAppElement(document.getElementById("root"));
 
@@ -59,6 +60,12 @@ class Product extends React.Component {
     this.props.fetchProducts();
     this.props.fetchReviews(this.props.match.params.productId);
     // debugger;
+    const history = createHistory();
+    if (history.location.state && history.location.state.transaction) {
+      let state = { ...history.location.state };
+      delete state.transaction;
+      history.replace({ ...history.location, state });
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -68,6 +75,10 @@ class Product extends React.Component {
       this.props.fetchProduct();
     }
   }
+
+  // componentWillUnmount() {
+  //   this.props.clearState();
+  // }
 
   addProduct(currentProduct) {
     this.props.createCartProduct({
