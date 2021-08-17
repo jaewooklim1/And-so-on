@@ -1,7 +1,7 @@
 import React from "react";
 import Rating from "react-rating";
 
-class UpdateReviewForm extends React.Component {
+class NewReviewForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -15,10 +15,12 @@ class UpdateReviewForm extends React.Component {
     e.preventDefault();
     debugger;
     this.props
-      .action(this.state)
-      .then(() =>
-        this.props.history.push(`/products/${this.props.product.id}`)
-      );
+      .action(this.state, this.props.product.id)
+      .then((res) => console.log(res));
+  }
+
+  updateReview(property) {
+    return (e) => this.setState({ [property]: e });
   }
 
   update(field) {
@@ -41,9 +43,9 @@ class UpdateReviewForm extends React.Component {
         >
           <h2 className="review-form-title">{this.props.formType}</h2>
           <div className="review-form-product-cont">
-            {/* <img src={this.props.product.photos[0]} alt="product-photo" /> */}
+            {/* <img src={this.props.product.photoUrl[0]} alt="product-photo" /> */}
             <div className="review-form-product-name">
-              {/* {this.props.product.name} */}
+              {/* {this.props.product.title} */}
             </div>
           </div>
 
@@ -53,7 +55,7 @@ class UpdateReviewForm extends React.Component {
               initialRating={this.state.rating}
               emptySymbol={empty}
               fullSymbol={full}
-              //   onChange={this.updateReview("rating")}
+              onChange={this.updateReview("rating")}
             />
           </div>
 
@@ -85,4 +87,4 @@ class UpdateReviewForm extends React.Component {
   }
 }
 
-export default UpdateReviewForm;
+export default NewReviewForm;

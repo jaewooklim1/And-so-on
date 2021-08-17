@@ -9,7 +9,7 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.integer :product_id, null: false
     end
 
-    add_index :reviews, :user_id, unique: true 
-    add_index :reviews, :product_id, unique: true
+    add_index :reviews, :user_id
+    add_index :reviews, :product_id
   end
 end

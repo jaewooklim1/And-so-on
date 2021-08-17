@@ -1,5 +1,5 @@
 import React from "react";
-// import Rating from "react-rating";
+import Rating from "react-rating";
 import { Link } from "react-router-dom";
 
 class ReviewIndex extends React.Component {
@@ -65,11 +65,6 @@ class ReviewIndex extends React.Component {
             return (
               <div key={review.id} className="review-item">
                 <div className="review-user">
-                  <img
-                    className="review-profile-pic"
-                    src={window.profilePic2}
-                    alt="profilePic"
-                  />
                   <div className="review-username">{review.userName}</div>
                 </div>
 

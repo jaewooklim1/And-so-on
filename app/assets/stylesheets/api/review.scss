@@ -1,0 +1,262 @@
+@font-face {
+  font-family: Amazon;
+  src: url(../fonts/AmazonEmber_Rg);
+}
+
+.review-container {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.review-left {
+  margin-right: 150px;
+  padding-bottom: 38px;
+  width: 300px;
+  // border-bottom: 1px solid #dddddd;
+  margin-left: 250px;
+  float: left;
+  font-family: Amazon;
+}
+
+.review-section-title {
+  font-size: 24px;
+}
+
+.review-product-text {
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+}
+
+.review-share-text {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.review-right {
+  float: right;
+}
+
+.review-right-title {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 25px;
+  font-family: Amazon;
+}
+
+.review-index {
+  font-family: Amazon;
+  margin-bottom: 55px;
+  border-bottom: 1px solid rgb(192, 192, 192);
+  max-width: 350px;
+}
+
+.review-userName {
+  font-size: 14px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  font-family: Amazon;
+}
+
+.review-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 0px;
+  font-family: Amazon;
+}
+
+.review-rating {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  font-family: Amazon;
+}
+
+.review-body {
+  font-family: Amazon;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+
+.review-button {
+  width: 300px;
+  height: 35px;
+  background: #fff;
+  border-color: #d5d9d9;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  font-size: 14px;
+  line-height: 20px;
+  font-family: Amazon;
+}
+
+.review-button:hover {
+  background: #f7fafa;
+}
+
+.r-container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.review-header {
+  font-size: 18px;
+}
+
+.review-ul {
+  padding-left: 0px;
+}
+
+.review-item {
+  margin-bottom: 30px;
+  // margin: 0px 0px 0px 20px;
+}
+
+.review-user {
+  display: flex;
+}
+
+.review-profile-pic {
+  margin-right: 5px;
+}
+
+.review-user:hover {
+  cursor: pointer;
+}
+
+.review-top {
+  display: flex;
+  height: 20px;
+  margin-bottom: 3px;
+}
+
+.review-top:hover {
+  cursor: pointer;
+}
+
+.review-username {
+  font-size: 13px;
+  color: #0f1111;
+  margin-bottom: 10px;
+  position: relative;
+  top: 13px;
+}
+
+.review-username:hover {
+  cursor: pointer;
+}
+
+.review-rating {
+  margin-right: 15px;
+}
+
+// .review-rating Rating {
+//     height: 15px;
+// }
+
+.review-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.review-title:hover {
+  color: #c7511f;
+  text-decoration: underline;
+}
+
+.review-line2 {
+  color: #565959;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.review-verified {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  color: #c45500;
+  margin-bottom: 10px;
+}
+
+.review-body {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+// .ratingz span {
+//     height: 10px;
+//     width: 10px;
+//         display: inline-block;
+//     border-radius: 50%;
+//     // border: 5px double white;
+//     // width: 30px;
+//     // height: 30px;
+//     background-color: black;
+// }
+
+.ratingz span {
+  width: 18px;
+}
+
+// .ratingz {
+//     width: 80px;
+// }
+
+.rating-star {
+  height: 18px;
+  width: 18px;
+}
+
+.review-helpful-text {
+  font-size: 14px;
+  color: #565959;
+  margin-bottom: 10px;
+}
+
+.review-bottom {
+  display: flex;
+}
+
+.review-helpful-button-cont {
+  padding-right: 20px;
+  border-right: 1px solid #dddddd;
+  // line-height: 5px;
+}
+
+.review-helpful {
+  width: 111px;
+  height: 37px;
+  background: #fff;
+  border-color: #d5d9d9;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+  font-size: 14px;
+  line-height: 20px;
+  // border-right: 1px solid #DDDDDD;
+  // margin-right: 20px;
+}
+
+.review-helpful:hover {
+  background: #f7fafa;
+}
+
+.review-abuse {
+  font-size: 14px;
+  color: #565959;
+  // border-left: 1px solid #DDDDDD;
+  position: relative;
+  top: 10px;
+  margin-left: 10px;
+}
+
+.review-abuse:hover {
+  cursor: pointer;
+}

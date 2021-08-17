@@ -9,7 +9,7 @@ const receiveReviews = (reviews) => ({
   reviews,
 });
 
-const receiveReview = ({ review }) => ({
+const receiveReview = (review) => ({
   type: RECEIVE_REVIEW,
   review,
 });
@@ -21,11 +21,12 @@ const removeReview = (reviewId) => ({
 
 export const fetchReviews = (productId) => (dispatch) => {
   return ReviewAPIUtil.fetchReviews(productId).then((reviews) =>
-    dispatch(receiveReviews(reviews))
+    dispatch(receiveReview(reviews))
   );
 };
 
 export const createReview = (review, productId) => (dispatch) => {
+  debugger;
   return ReviewAPIUtil.createReview(review, productId).then((review) =>
     dispatch(receiveReview(review))
   );

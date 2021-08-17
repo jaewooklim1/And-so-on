@@ -12,6 +12,8 @@ import PicCarousel from "./carousel/carousel";
 import Footer from "./footer/footer";
 import CartContainer from "./cart/cart_container";
 import SearchResultContainer from "./search/search_result_container";
+import NewReview from "../components/reviews/new_review_container";
+import EditReview from "../components/reviews/review_container";
 
 const App = () => (
   <div>
@@ -45,6 +47,8 @@ const App = () => (
           <div className="backgroundColorBlendThree" />
         </div>
       </Route>
+      <Route path="/review/create-review" component={NewReview} />
+      <Route path="/review/edit-review" component={EditReview} />
     </div>
     <Route path="/cart_products/" component={CartContainer}></Route>
 

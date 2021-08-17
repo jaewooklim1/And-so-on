@@ -12,6 +12,7 @@ const ReviewsReducer = (state = {}, action) => {
     case RECEIVE_REVIEWS:
       return merge({}, action.reviews);
     case RECEIVE_REVIEW:
+      debugger;
       return Object.assign({}, state, action.review);
     case REMOVE_REVIEW:
       delete newState[action.reviewId];

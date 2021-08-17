@@ -61,8 +61,8 @@ ActiveRecord::Schema.define(version: 2021_08_06_024447) do
     t.integer "rating", null: false
     t.integer "user_id", null: false
     t.integer "product_id", null: false
-    t.index ["product_id"], name: "index_reviews_on_product_id", unique: true
-    t.index ["user_id"], name: "index_reviews_on_user_id", unique: true
+    t.index ["product_id"], name: "index_reviews_on_product_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

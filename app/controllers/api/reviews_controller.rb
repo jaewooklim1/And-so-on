@@ -1,7 +1,9 @@
 class Api::ReviewsController < ApplicationController
-    before_action :ensure_logged_in, except: [:index]
+    # before_action :ensure_logged_in, except: [:index]
+    skip_before_action :verify_authenticity_token
 
     def index 
+        # debugger
         if params[:product_id]
             @reviews = Review.where(product_id: params[:product_id])
 

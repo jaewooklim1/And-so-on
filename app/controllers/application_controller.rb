@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
 
     helper_method :current_user, :logged_in?
     #CELLL
+
+    # protect_from_forgery with: :null_session
   
     def current_user
       @current_user ||= User.find_by(session_token: session[:session_token])
@@ -22,4 +24,9 @@ class ApplicationController < ActionController::Base
       @current_user = nil
     end
   
+    def ensure_logged_in
+      render json: ["Invalid user"], status: 404 unless logged_in?
+    end
+  
+
   end
