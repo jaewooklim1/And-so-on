@@ -17,7 +17,7 @@ class CartProducts extends React.Component {
 
   componentDidMount() {
     this.props.fetchCartProducts();
-    debugger;
+    // debugger;
   }
 
   componentDidUpdate(prevProps) {

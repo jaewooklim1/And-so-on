@@ -61,7 +61,7 @@ const App = () => (
     </div>
 
     <Route exact path="/" component={Footer} />
-    <Route path="/products/" component={Footer} />
+
     <Route path="/search/" component={Footer} />
     <Route path="/cart_products/" component={Footer} />
   </div>

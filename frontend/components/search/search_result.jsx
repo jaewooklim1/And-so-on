@@ -25,7 +25,7 @@ class SearchResult extends React.Component {
       }
     );
 
-    debugger;
+    // debugger;
 
     const result = searcher.search(searchTerm);
     this.setState({ searchResult: result });

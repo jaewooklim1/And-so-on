@@ -2,9 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Modal from "react-modal";
 import ReviewForm from "../reviews/review_index_container";
-import ReviewContainer from "../reviews/review_container";
+import ReviewIndexContainer from "../reviews/review_index_container";
 import NewReview from "../reviews/review_container";
 import createHistory from "history/createBrowserHistory";
+import Footer from "../footer/footer";
+import Rating from "react-rating";
+
+import empty_star from "../../../app/assets/images/empty_star.svg";
+import full_star from "../../../app/assets/images/full_star.svg";
 
 Modal.setAppElement(document.getElementById("root"));
 
@@ -91,7 +96,7 @@ class Product extends React.Component {
     e.preventDefault();
 
     if (this.props.sessionId) {
-      debugger;
+      // debugger;
       let { product, userCartProducts } = this.props;
       let cartproducts = Object.values(userCartProducts);
       let productsArr = [];
@@ -115,20 +120,20 @@ class Product extends React.Component {
   }
 
   hasReviews() {
-    let reviewArr = Object.keys(this.props.userReviews); //reviewArr = (2) ["11", "30"]
-    let reviewArr2 = Object.keys(this.props.userReviews);
-    debugger;
-    let reviewArrActual = [];
-    debugger;
+    // let reviewArr = Object.keys(this.props.userReviews); //reviewArr = (2) ["11", "30"]
+    // let reviewArr2 = Object.values(this.props.userReviews);
+    // debugger;
+    // let reviewArrActual = [];
+    // debugger;
 
-    // for (let i = 0; i < reviewArr2.length; i++) {
-    //   if (reviewArr2[i][1].product_id === this.props.match.params.productId) {
-    //     reviewArrActual.push(reviewArr2[i][1]);
-    //   }
-    // }
+    // reviewArr2.filter(
+    //   (ele) => this.props.match.params.productId === ele.product_id
+    // );
+
+    // console.log(reviewArr2);
 
     // console.log(reviewArrActual);
-    debugger;
+    // debugger;
 
     let product;
     if (this.props.product === undefined) {
@@ -153,6 +158,31 @@ class Product extends React.Component {
       </Link>
     );
 
+    const full = <img className="rating-star" src={full_star} />;
+
+    const empty = <img className="rating-star" src={empty_star} />;
+    const currentProductId = this.props.match.params.productId;
+
+    var sumOfReviews = 0;
+    var numOfReviews = 0;
+    var avgRating = 0;
+    debugger;
+
+    if (Object.values(this.props.userReviews).length > 0) {
+      Object.values(this.props.userReviews)
+        .filter((ele) => {
+          return currentProductId === ele.product_id.toString();
+        })
+        .map((ele) => {
+          numOfReviews++;
+          sumOfReviews += ele.rating;
+        });
+
+      avgRating = sumOfReviews / numOfReviews;
+      debugger;
+    }
+    //implicit return
+
     return (
       <div className="product-page">
         <div className="product-category">
@@ -170,6 +200,14 @@ class Product extends React.Component {
             <div className="product-text-container">
               <div className="product-title-header">
                 <h1 className="product-title">{product.title}</h1>
+                <div>
+                  <Rating
+                    initialRating={avgRating}
+                    emptySymbol={empty}
+                    fullSymbol={full}
+                    readonly={true}
+                  />
+                </div>
               </div>
               <div className="product-show-container">
                 <br></br>
@@ -278,26 +316,26 @@ class Product extends React.Component {
 
           <div className="review-right">
             <h1 className="review-right-title">Top Reviews in the US</h1>
-            {reviewArr2.map((reviewId) => (
+            <ReviewIndexContainer></ReviewIndexContainer>
+            {/* {reviewArr2.map((reviewProperties) => (
               <div className="individual-reviews">
-                <div className="review-index" key={reviewId}>
+                <div className="review-index">
                   <ul className="review-userName">
-                    User: {this.props.userReviews[reviewId].userName}
+                    User: {reviewProperties.userName}
                   </ul>
-                  <ul className="review-title">
-                    {this.props.userReviews[reviewId].title}
-                  </ul>
+                  <ul className="review-title">{reviewProperties.title}</ul>
                   <ul className="review-rating">
-                    {this.props.userReviews[reviewId].rating} stars / 5 stars
+                    {reviewProperties.rating} stars / 5 stars
                   </ul>
 
-                  <ul className="review-body">
-                    {this.props.userReviews[reviewId].body}
-                  </ul>
+                  <ul className="review-body">{reviewProperties.body}</ul>
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
+        </div>
+        <div className="product-footer">
+          <Footer></Footer>
         </div>
       </div>
     );

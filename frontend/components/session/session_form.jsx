@@ -35,7 +35,6 @@ class SessionForm extends React.Component {
       password: this.state.password,
       username: this.state.username,
     };
-    debugger;
     this.props.processForm(user).then((user) => this.props.history.push("/"));
   }
 

@@ -4,7 +4,7 @@ import { createReview } from "../../actions/review_actions";
 import { withRouter } from "react-router-dom";
 
 const mSTP = (state, ownProps) => {
-  debugger;
+  // debugger;
   return {
     formType: "Create Review",
     review: {

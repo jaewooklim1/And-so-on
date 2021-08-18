@@ -32,7 +32,7 @@ class ProductsIndex extends React.Component {
       }
     }
 
-    debugger;
+    // debugger;
 
     const { products } = this.props;
     const prodVal = Object.values(products);

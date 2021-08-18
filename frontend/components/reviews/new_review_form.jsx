@@ -13,7 +13,7 @@ class NewReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
+    // debugger;
     this.props
       .action(this.state, this.props.product.id)
       .then((res) => console.log(res));

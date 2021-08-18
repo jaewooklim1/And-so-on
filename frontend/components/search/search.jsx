@@ -11,13 +11,10 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
     this.props.fetchProducts(this.state.keyword);
-    debugger;
     // this.setState({ keyword: "" });
 
     this.props.history.push(`/search?=${this.state.keyword}`);
-    debugger;
   }
 
   update(field) {
