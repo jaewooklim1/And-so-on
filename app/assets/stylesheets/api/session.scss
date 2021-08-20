@@ -1,6 +1,6 @@
 @font-face {
   font-family: Amazon;
-  src: url(../.fonts/AmazonEmber_Rg);
+  src: url("../fonts/AmazonEmber_Rg.ttf");
 }
 
 body {
@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   height: 1000px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .sign-up {

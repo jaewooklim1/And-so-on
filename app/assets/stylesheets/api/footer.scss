@@ -1,6 +1,6 @@
 @font-face {
   font-family: Amazon;
-  src: url(../.fonts/AmazonEmber_Rg);
+  src: url("../fonts/AmazonEmber_Rg.ttf");
 }
 
 .footer {
@@ -88,4 +88,12 @@
     background-repeat: none;
     margin-top: 25px;
   }
+}
+
+.product-footer {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  justify-content: center;
+  bottom: -100%;
 }

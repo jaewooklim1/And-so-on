@@ -1,13 +1,13 @@
 @font-face {
   font-family: "AmazonEmber";
-  src: url("../fonts/AmazonEmber_Bd.ttf");
+  src: url("../fonts/AmazonEmber_Rg.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Amazon;
-  src: url(../.fonts/AmazonEmber_Rg);
+  src: asset-path(AmazonEmber_Rg) format("truetype");
 }
 
 .all-products {
