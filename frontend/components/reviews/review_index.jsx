@@ -115,7 +115,7 @@ class ReviewIndex extends React.Component {
                     <div>
                       {this.props.authorId === review.user_id ? (
                         <div className="review-buttons-cont">
-                          <button onClick={this.handleEditReview}>Edit</button>
+                          {/* <button onClick={this.handleEditReview}>Edit</button> */}
                           <button
                             className="review-delete-buttons"
                             onClick={this.handleDeleteReview(review.id)}
