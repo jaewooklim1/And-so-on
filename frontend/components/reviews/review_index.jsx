@@ -97,9 +97,6 @@ class ReviewIndex extends React.Component {
 
                     <div className="review-title">{review.title}</div>
                   </div>
-                  <div className="review-line2">
-                    Reviewed in the United States on {reviewDate}
-                  </div>
 
                   <div className="review-verified">Verified Purchase</div>
 
