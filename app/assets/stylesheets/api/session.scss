@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   src: url("../fonts/AmazonEmber_Rg.ttf");
 }
 
@@ -23,7 +23,7 @@ body {
   box-sizing: border-box;
   position: relative;
   z-index: 0;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .header-logo {
@@ -74,20 +74,20 @@ body {
   top: 30px;
   margin-left: 41.5%;
   // margin-right: 57.5%;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .header-text {
   font-weight: 100;
   font-size: 20px;
   padding: 5px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .input-info {
   margin-left: auto;
   margin-right: auto;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .email-text,
@@ -95,7 +95,7 @@ body {
 .re-enter-password-text,
 .username-text {
   width: 309px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .submit-button {
@@ -106,18 +106,18 @@ body {
   overflow: hidden;
   height: 29px;
   border-radius: 2px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .form-errors {
   font-size: 10px;
   color: red;
   padding: 1px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .terms-of-conditions {
   font-size: 10px;
   font-weight: 100;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }

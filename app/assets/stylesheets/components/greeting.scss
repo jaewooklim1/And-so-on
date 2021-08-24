@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   src: url(../fonts/AmazonEmber_Rg);
 }
 
@@ -42,7 +42,7 @@
   background-image: image_url("And-so-on-2.png");
   background-size: contain;
   background-repeat: no-repeat;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 #alexa {
@@ -54,7 +54,7 @@
   background-repeat: no-repeat;
   z-index: 0;
   // display: none;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .alexa-stuff {
@@ -79,7 +79,7 @@
   height: 100px;
   width: 1500px;
   // margin-bottom: 425px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .backgroundColorBlendThree {
@@ -87,7 +87,7 @@
   height: 100px;
   width: 1500px;
   // margin-bottom: 425px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .nav-mid {
@@ -189,13 +189,13 @@
   height: 45px;
   margin-top: 7px;
   float: left;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .cart-icon {
   display: flex;
   float: left;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 
   width: 100px;
   height: 50px;
@@ -207,7 +207,7 @@
   display: flex;
   color: white;
   font-size: 18px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   align-items: left;
 }
 
@@ -231,7 +231,7 @@
 
 .user-signed-in {
   color: white;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 
   font-size: 13px;
   padding-top: 15px;
@@ -264,9 +264,9 @@
   height: 32px;
   border-radius: 3px;
   margin-bottom: 15px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .signin-login-dropdown {
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }

@@ -3,12 +3,12 @@
 }
 
 @font-face {
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   src: url("../fonts/AmazonEmber_Rg.ttf");
 }
 
 .cart-header {
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   font-size: 30px;
   margin-top: 50px;
   margin-left: 150px;
@@ -54,7 +54,7 @@
   margin-right: 150px;
   margin-left: 50px;
   width: 1500px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   font-size: 30px;
   font-weight: bolder;
 }

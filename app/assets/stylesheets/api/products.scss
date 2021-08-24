@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   src: asset-path(AmazonEmber_Rg) format("truetype");
 }
 
@@ -15,12 +15,12 @@
   top: 355px;
   width: 1500px;
   z-index: 0;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-row-one {
   display: flex;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-card-outline {
@@ -31,7 +31,7 @@
   font-family: "AmazonEmber";
   border: 1px;
   margin: 20px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-card-image {
@@ -48,7 +48,7 @@
   // padding: 20px;
   text-align: center;
   padding: 12px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   // text-decoration: none;
   text-decoration: underline;
   text-decoration-color: white;
@@ -77,7 +77,7 @@
   height: 100px;
   width: 1500px;
   margin-bottom: 52px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-text-container {
@@ -88,7 +88,7 @@
   background-color: white;
   width: 1750px;
   height: 1500px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-category {
@@ -98,7 +98,7 @@
   font-size: 25px;
   font-weight: bold;
   white-space: nowrap;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-show {
@@ -114,13 +114,13 @@
 .product-label-description {
   padding-bottom: 30px;
   border-bottom: 1px solid gray;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-label-price {
   padding-top: 50px;
   color: red;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-photo {
@@ -139,7 +139,7 @@
   width: 150px;
   // overflow: hidden;
   white-space: nowrap;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-title {
@@ -147,19 +147,19 @@
   margin-left: 180px;
   margin-top: 80px;
   // width: 150px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-description {
   margin-left: 50px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .product-properties {
   float: right;
   margin: 0 0 22px 20px;
   width: 270px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .split-center-product-column {

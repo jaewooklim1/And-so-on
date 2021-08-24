@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   src: url("../fonts/AmazonEmber_Rg.ttf");
 }
 
@@ -11,7 +11,7 @@
   background-color: #242f3e;
   display: block;
   float: bottom;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .back-to-top {
@@ -23,7 +23,7 @@
   padding-top: 18px;
   font-family: "";
   font-size: 13px;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 }
 
 .back-to-top:hover {
@@ -45,7 +45,7 @@
   width: 500px;
   display: block;
   text-align: center;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
   li {
     font-size: 12px;
     font-family: inherit;
@@ -79,7 +79,7 @@
   height: 80px;
   display: flex;
   justify-content: center;
-  font-family: Amazon;
+  font-family: Amazon, sans-serif;
 
   .and-so-on-logo {
     height: 25px;
