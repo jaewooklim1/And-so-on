@@ -29,7 +29,7 @@ module.exports = {
         },
       },
       {
-        test: /.svg$/,
+        test: /\.svg$/,
         use: [
           {
             loader: "svg-url-loader",
