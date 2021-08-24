@@ -42,8 +42,10 @@
   "scripts": {
     "dev": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode=development --watch",
     "webpack": "webpack --watch --mode=development",
-    "postinstall": "webpack"  },
+    "postinstall": "webpack"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
