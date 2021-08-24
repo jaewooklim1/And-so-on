@@ -1,5 +1,7 @@
 import React from "react";
 import Rating from "react-rating";
+import empty_star from "../../../app/assets/images/empty_star.svg";
+import full_star from "../../../app/assets/images/full_star.svg";
 
 class NewReviewForm extends React.Component {
   constructor(props) {
@@ -30,9 +32,9 @@ class NewReviewForm extends React.Component {
   }
 
   render() {
-    const full = <img src={window.fullStar} />;
+    const full = <img className="rating-star" src={full_star} />;
 
-    const empty = <img src={window.emptyStar} />;
+    const empty = <img className="rating-star" src={empty_star} />;
 
     return (
       <div>

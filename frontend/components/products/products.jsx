@@ -200,14 +200,15 @@ class Product extends React.Component {
             <div className="product-text-container">
               <div className="product-title-header">
                 <h1 className="product-title">{product.title}</h1>
-                <div>
+                <h2 className="product-rating-stars">
+                  Avg Rating:
                   <Rating
                     initialRating={avgRating}
                     emptySymbol={empty}
                     fullSymbol={full}
                     readonly={true}
                   />
-                </div>
+                </h2>
               </div>
               <div className="product-show-container">
                 <br></br>
