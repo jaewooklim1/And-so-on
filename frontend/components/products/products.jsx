@@ -166,7 +166,6 @@ class Product extends React.Component {
     var sumOfReviews = 0;
     var numOfReviews = 0;
     var avgRating = 0;
-    debugger;
 
     if (Object.values(this.props.userReviews).length > 0) {
       Object.values(this.props.userReviews)
