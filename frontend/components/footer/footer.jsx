@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 // import { withRouter } from 'react-router-dom';
-import ReactDOM from 'react-dom';
-import Modal from 'react-modal';
-import {Link} from 'react-router-dom';
+import ReactDOM from "react-dom";
+import Modal from "react-modal";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -18,13 +18,18 @@ export default function Footer() {
             <a
               className="creator-links"
               href="https://www.linkedin.com/in/jae-wook-lim-93b5b8214/"
+              target="_blank"
             >
-              {' '}
+              {" "}
               LinkedIn
-            </a>{' '}
+            </a>{" "}
             |
-            <a className="creator-links" href="https://github.com/jaewooklim1">
-              {' '}
+            <a
+              className="creator-links"
+              href="https://github.com/jaewooklim1"
+              target="_blank"
+            >
+              {" "}
               GitHub
             </a>
           </li>
