@@ -267,16 +267,21 @@ class Product extends React.Component {
                       className="cart-purchase"
                       onMouseClick={this.openModal}
                     >
-                      <button className="add-to-cart" onClick={this.addToCart}>
-                        {/* <img
+                      <Link to="/cart_products">
+                        <button
+                          className="add-to-cart"
+                          onClick={(e) => this.addToCart(e)}
+                        >
+                          {/* <img
                     className="cart-logo"
                     src="https://i.imgur.com/9pUQTdZ.png"
                   ></img>{" "} */}
-                        Add to Cart
-                        {/* <div className="product-added">
+                          Add to Cart
+                          {/* <div className="product-added">
                     <span className="check-mark">✓</span> Added to Cart
                   </div> */}
-                      </button>
+                        </button>
+                      </Link>
                       <Modal
                         isOpen={this.state.modalIsOpen}
                         onRequestClose={this.closeModal}
@@ -441,16 +446,21 @@ class Product extends React.Component {
                       className="cart-purchase"
                       onMouseClick={this.openModal}
                     >
-                      <button className="add-to-cart" onClick={this.addToCart}>
-                        {/* <img
+                      <Link to="/cart_products">
+                        <button
+                          className="add-to-cart"
+                          onClick={this.addToCart}
+                        >
+                          {/* <img
                     className="cart-logo"
                     src="https://i.imgur.com/9pUQTdZ.png"
                   ></img>{" "} */}
-                        Add to Cart
-                        {/* <div className="product-added">
+                          Add to Cart
+                          {/* <div className="product-added">
                     <span className="check-mark">✓</span> Added to Cart
                   </div> */}
-                      </button>
+                        </button>
+                      </Link>
                       <Modal
                         isOpen={this.state.modalIsOpen}
                         onRequestClose={this.closeModal}

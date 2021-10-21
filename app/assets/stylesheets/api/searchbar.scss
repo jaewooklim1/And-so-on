@@ -33,6 +33,7 @@
   padding-left: 8px;
   flex: 2;
   width: 100%;
+  font-family: Amazon, sans-serif;
 }
 
 .search-input:focus {
@@ -60,4 +61,9 @@
 .fa-search {
   color: #122;
   font-size: 21px;
+}
+
+.search-magnifying-glass {
+  width: 25px;
+  height: 25px;
 }

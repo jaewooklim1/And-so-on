@@ -31,9 +31,14 @@ class Search extends React.Component {
               value={this.state.keyword}
               onChange={this.update("keyword")}
               className="search-input"
+              placeholder="Search And-So-On..."
             />
             <button className="submit-search" type="submit">
               <i className="fas fa-search"></i>
+              <img
+                className="search-magnifying-glass"
+                src="https://i.imgur.com/MmksHiu.png"
+              ></img>
             </button>
           </div>
         </form>
