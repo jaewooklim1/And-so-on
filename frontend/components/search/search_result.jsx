@@ -13,8 +13,10 @@ class SearchResult extends React.Component {
     this.searchResultBad = this.searchResultBad.bind(this);
   }
 
+  //async removed here
   async componentDidMount() {
     await this.props.fetchProducts();
+    // this.props.fetchProducts();
     const searchTerm = this.props.location.search.split("=")[1];
 
     const searcher = new FuzzySearch(
@@ -31,7 +33,7 @@ class SearchResult extends React.Component {
     this.setState({ searchResult: result });
     console.log(this.state);
     console.log(result);
-    console.log(searchResult);
+    // console.log(searchResult);
   }
 
   searchResultGood() {

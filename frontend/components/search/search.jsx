@@ -1,4 +1,5 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 class Search extends React.Component {
   constructor(props) {
@@ -12,9 +13,9 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.fetchProducts(this.state.keyword);
-    // this.setState({ keyword: "" });
 
     this.props.history.push(`/search?=${this.state.keyword}`);
+    this.setState({ keyword: "" });
   }
 
   update(field) {
@@ -47,4 +48,4 @@ class Search extends React.Component {
   }
 }
 
-export default Search;
+export default withRouter(Search);

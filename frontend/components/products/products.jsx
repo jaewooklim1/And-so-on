@@ -86,10 +86,12 @@ class Product extends React.Component {
   // }
 
   addProduct(currentProduct) {
-    this.props.createCartProduct({
-      user_id: this.props.sessionId,
-      product_id: currentProduct.id,
-    });
+    this.props
+      .createCartProduct({
+        user_id: this.props.sessionId,
+        product_id: currentProduct.id,
+      })
+      .then(() => this.props.history.push("/cart_products"));
   }
 
   addToCart(e) {
@@ -267,21 +269,21 @@ class Product extends React.Component {
                       className="cart-purchase"
                       onMouseClick={this.openModal}
                     >
-                      <Link to="/cart_products">
-                        <button
-                          className="add-to-cart"
-                          onClick={(e) => this.addToCart(e)}
-                        >
-                          {/* <img
+                      {/* <Link to="/cart_products"> */}
+                      <button
+                        className="add-to-cart"
+                        onClick={(e) => this.addToCart(e)}
+                      >
+                        {/* <img
                     className="cart-logo"
                     src="https://i.imgur.com/9pUQTdZ.png"
                   ></img>{" "} */}
-                          Add to Cart
-                          {/* <div className="product-added">
+                        Add to Cart
+                        {/* <div className="product-added">
                     <span className="check-mark">✓</span> Added to Cart
                   </div> */}
-                        </button>
-                      </Link>
+                      </button>
+                      {/* </Link> */}
                       <Modal
                         isOpen={this.state.modalIsOpen}
                         onRequestClose={this.closeModal}

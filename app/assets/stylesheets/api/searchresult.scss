@@ -10,8 +10,10 @@
 .search-result-container {
   display: flex;
   font-family: Amazon, sans-serif;
-  height: 700px;
+  height: 700%;
+  min-height: 670px;
   align-items: center;
+  flex-direction: column;
 }
 
 .empty-search-text {
@@ -20,7 +22,7 @@
 
 .searchItem-display {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 1000px;
   margin-left: 250px;
   border-top: 1px solid gray;
@@ -41,10 +43,11 @@
   flex-direction: column;
   margin-left: 150px;
   top: 150px;
-  float: right;
+  float: left;
   font-size: 25px;
   color: black;
   font-family: Amazon, sans-serif;
+  max-width: 550px;
 }
 
 .searchItem-description > h1 {
@@ -74,4 +77,7 @@
 
 .search-price {
   color: red;
+  display: flex;
+
+  float: right;
 }

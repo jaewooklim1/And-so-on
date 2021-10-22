@@ -30,7 +30,7 @@
   min-height: 750px;
   padding: 14px 18px 18px;
   margin: 0 auto;
-  z-index: 0;
+  // z-index: -1;
 }
 
 .inner-cart-container {
@@ -39,7 +39,7 @@
   min-height: 300px;
   margin-top: 50px;
   margin-left: 70px;
-  z-index: 5;
+  // z-index: 1;
   float: left;
   display: flex;
   flex-direction: column;

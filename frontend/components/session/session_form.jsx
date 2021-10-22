@@ -124,7 +124,7 @@ class SessionForm extends React.Component {
               {this.props.formType === "signup" ? (
                 <div className="form-errors">
                   {this.state.username.length < 6 && this.state.submitPressed
-                    ? "Enter a valid username"
+                    ? "Enter a valid username. Must be 6 characters or more"
                     : ""}
                 </div>
               ) : (
@@ -143,11 +143,11 @@ class SessionForm extends React.Component {
               </label>
               <div className="form-errors">
                 {this.state.password.length < 6 && this.state.submitPressed
-                  ? "Enter a valid password"
+                  ? "Enter a valid password. Must be 6 characters or more"
                   : ""}
               </div>
               <br></br>
-              {this.props.formType === "signup" ? (
+              {/* {this.props.formType === "signup" ? (
                 <label>
                   Re-enter Password
                   <br></br>
@@ -170,7 +170,7 @@ class SessionForm extends React.Component {
                 </div>
               ) : (
                 <></>
-              )}
+              )} */}
               <br></br>
               <button className="submit-button" type="submit">
                 {this.props.formType}
@@ -184,6 +184,8 @@ class SessionForm extends React.Component {
             <button className="demo-user-button" onClick={this.demoLogin}>
               Demo User Login
             </button>
+            <br></br>
+            <br></br>
             {this.props.formType === "signup" ? (
               <label className="terms-of-conditions">
                 By creating an account, you agree to And-so-on's non-existent
