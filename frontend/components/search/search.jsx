@@ -1,5 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import "regenerator-runtime/runtime";
+import "core-js/stable";
 
 class Search extends React.Component {
   constructor(props) {
@@ -10,12 +12,15 @@ class Search extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
+    debugger;
     e.preventDefault();
-    this.props.fetchProducts(this.state.keyword);
+    await this.props.fetchProducts(this.state.keyword);
 
     this.props.history.push(`/search?=${this.state.keyword}`);
     this.setState({ keyword: "" });
+    // this.props.history.push(`/search?=${this.state.keyword}`);
+    window.location.reload(true);
   }
 
   update(field) {

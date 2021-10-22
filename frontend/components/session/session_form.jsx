@@ -50,14 +50,34 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
+    console.log(this.props.errors);
+    console.log(this.props.session);
+    let errorArray = Array.from(this.props.errors.session);
+    // console.log(errorArray);
     return (
       <ul>
-        {this.props.errors.map((error, i) => (
+        {errorArray.map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     );
+    // console.log(errorArray);
+
+    // </ul>
   }
+
+  // renderErrors() {
+  //   return (
+  //     <div>
+  //       {this.props.errors.map((error, i) => (
+  //         <span key={`error-${i}`}>
+  //           <br className="err-spacer"></br>
+  //           {error}
+  //         </span>
+  //       ))}
+  //     </div>
+  //   );
+  // }
 
   update(field) {
     return (e) =>
@@ -106,6 +126,12 @@ class SessionForm extends React.Component {
                   ? "Email must be valid"
                   : ""}
               </div>
+              <div className="form-errors">
+                {this.state.password.length < 6 && this.state.submitPressed
+                  ? "Password must be valid"
+                  : ""}
+              </div>
+
               <br></br>
               {this.props.formType === "signup" ? (
                 <label>
@@ -175,6 +201,7 @@ class SessionForm extends React.Component {
               <button className="submit-button" type="submit">
                 {this.props.formType}
               </button>
+              <div className="render-errors">{this.renderErrors()}</div>
             </form>
             <br></br>
             <Link to={`/${link}`}>{link}</Link> instead

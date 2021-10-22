@@ -15,10 +15,11 @@ class SearchResult extends React.Component {
 
   //async removed here
   async componentDidMount() {
-    await this.props.fetchProducts();
+    debugger;
+    await this.props.fetchProducts(this.state.keyword);
     // this.props.fetchProducts();
     const searchTerm = this.props.location.search.split("=")[1];
-
+    debugger;
     const searcher = new FuzzySearch(
       Object.values(this.props.allProducts),
       ["title"],
@@ -27,12 +28,16 @@ class SearchResult extends React.Component {
       }
     );
 
-    // debugger;
+    debugger;
 
     const result = searcher.search(searchTerm);
+    debugger;
+    console.log(searchTerm);
     this.setState({ searchResult: result });
     console.log(this.state);
     console.log(result);
+    // this.props.history.push(`/search?=${this.state.result}`);
+
     // console.log(searchResult);
   }
 
