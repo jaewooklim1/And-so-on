@@ -18,9 +18,11 @@ class Search extends React.Component {
     await this.props.fetchProducts(this.state.keyword);
 
     this.props.history.push(`/search?=${this.state.keyword}`);
-    this.setState({ keyword: "" });
+    debugger;
+    this.setState({ keyword: "spoon" });
+
     // this.props.history.push(`/search?=${this.state.keyword}`);
-    window.location.reload(true);
+    // window.location.reload(true);
   }
 
   update(field) {
