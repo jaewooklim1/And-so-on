@@ -123,6 +123,11 @@ body {
 }
 
 .render-errors {
-  font-size: 150px;
+  font-size: 15px;
   z-index: 15;
+  margin-top: 10px;
+  color: red;
+  align-items: center;
+  display: block;
+  font-family: Amazon, sans-serif;
 }

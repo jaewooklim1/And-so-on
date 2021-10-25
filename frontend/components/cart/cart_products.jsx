@@ -7,6 +7,7 @@ class CartProducts extends React.Component {
 
     this.state = {
       total: 0,
+      purchased: false,
     };
 
     this.emptyCart = this.emptyCart.bind(this);
@@ -29,15 +30,26 @@ class CartProducts extends React.Component {
     }
   }
 
-  render() {
-    console.log(this.props.cartProducts);
-    console.log(this.props);
+  handleCheckout(e) {
+    e.preventDefault();
+    let userProducts = this.props.userCartProducts;
 
-    return (
-      <div>
-        <div></div>
-      </div>
-    );
+    userProducts.forEach((product) => {
+      this.props.deleteCartProduct(product);
+    });
+
+    this.setState({ purchased: true });
+  }
+
+  calculateTotal() {
+    let total = 0;
+    let userProducts = Object.values(this.props.userCartProducts);
+    console.log(userProducts);
+    debugger;
+    userProducts.forEach((product) => {
+      total += product.price;
+    });
+    return total;
   }
 
   filledCart() {
@@ -64,7 +76,9 @@ class CartProducts extends React.Component {
                         }
                       ></img>
                     </div>
-                    <div className="mid-side-specific">
+                    <br></br>
+
+                    <div className="mid-side-specific-info">
                       <Link
                         className="item-body"
                         to={`/products/${this.props.userCartProducts[cartProductId].id}`}
@@ -73,10 +87,14 @@ class CartProducts extends React.Component {
                           {this.props.userCartProducts[cartProductId].title}
                         </div>
                       </Link>
-                      <span className="in-stock-cart">In Stock</span>
+                      <br></br>
+
                       <div class="column" className="cart-product-price">
                         {this.props.userCartProducts[cartProductId].price}
                       </div>
+                      <br></br>
+                      <span className="in-stock-cart">In Stock</span>
+                      <br></br>
 
                       <div className="qty-delete-row" class="column">
                         <button
@@ -95,6 +113,21 @@ class CartProducts extends React.Component {
             </ul>
           </div>
         </div>
+        <div className="total-price-container">
+          <div className="total-price">
+            Subtotal: <span>({this.props.userCartProducts.length}Items) </span>
+            <span style={{ fontWeight: "bold" }}>
+              ${this.calculateTotal().toFixed(2)}
+            </span>
+          </div>
+          <div className="checkout-button-container"></div>
+          <button
+            className="checkout-button"
+            onClick={(e) => this.handleCheckout(e)}
+          >
+            Proceed to checkout
+          </button>
+        </div>
       </div>
     );
   }
@@ -112,6 +145,21 @@ class CartProducts extends React.Component {
           <div className="empty-cart-message">
             Your And-So-On Shopping Cart is empty.
           </div>
+        </div>
+        <div className="total-price-container">
+          <div className="total-price">
+            Subtotal: <span>({this.props.userCartProducts.length}Items) </span>
+            <span style={{ fontWeight: "bold" }}>
+              ${this.calculateTotal().toFixed(2)}
+            </span>
+          </div>
+          <div className="checkout-button-container"></div>
+          <button
+            className="checkout-button"
+            onClick={(e) => this.handleCheckout(e)}
+          >
+            Proceed to checkout
+          </button>
         </div>
       </div>
     );

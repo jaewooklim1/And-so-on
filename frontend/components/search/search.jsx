@@ -22,7 +22,7 @@ class Search extends React.Component {
     this.setState({ keyword: "spoon" });
 
     // this.props.history.push(`/search?=${this.state.keyword}`);
-    // window.location.reload(true);
+    window.location.reload(true);
   }
 
   update(field) {
