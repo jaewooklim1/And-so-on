@@ -36,18 +36,21 @@ class NewReviewForm extends React.Component {
 
     const empty = <img className="rating-star" src={empty_star} />;
 
+    console.log(this.props.product);
+    debugger;
+
     return (
-      <div>
+      <div className="new-review-form-container">
         <form
           className="review-form-cont"
           action=""
           onSubmit={this.handleSubmit}
         >
-          <h2 className="review-form-title">{this.props.formType}</h2>
-          <div className="review-form-product-cont">
-            {/* <img src={this.props.product.photoUrl[0]} alt="product-photo" /> */}
-            <div className="review-form-product-name">
-              {/* {this.props.product.title} */}
+          <h2 className="new-review-form-title">{this.props.formType}</h2>
+          <div className="new-review-form-product-cont">
+            <img src={this.props.product.photoUrl[0]} alt="product-photo" />
+            <div className="new-review-form-product-name">
+              {this.props.product.title}
             </div>
           </div>
 

@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
       product_id: ownProps.productId,
       rating: 0,
     },
-    // product: state.entities.products[ownProps.location.productId],
+    product: state.entities.products[ownProps.location.productId],
   };
 };
 

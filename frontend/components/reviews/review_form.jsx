@@ -43,9 +43,9 @@ class UpdateReviewForm extends React.Component {
         >
           <h2 className="review-form-title">{this.props.formType}</h2>
           <div className="review-form-product-cont">
-            {/* <img src={this.props.product.photos[0]} alt="product-photo" /> */}
+            <img src={this.props.product.photos[0]} alt="product-photo" />
             <div className="review-form-product-name">
-              {/* {this.props.product.name} */}
+              {this.props.product.name}
             </div>
           </div>
 

@@ -12,8 +12,8 @@ import PicCarousel from "./carousel/carousel";
 import Footer from "./footer/footer";
 import CartContainer from "./cart/cart_container";
 import SearchResultContainer from "./search/search_result_container";
-import NewReview from "../components/reviews/new_review_container";
-import EditReview from "../components/reviews/review_container";
+import NewReview from "./reviews/new_review_container";
+import EditReview from "./reviews/review_container";
 
 const App = () => (
   <div>
@@ -25,6 +25,10 @@ const App = () => (
       <Route path="/products/" component={greeting_container} />
       <Route path="/search/" component={greeting_container} />
       <Route path="/cart_products/" component={greeting_container} />
+
+      <Route path="/review/" component={greeting_container} />
+      <Route path="/review_form/" component={greeting_container} />
+      <Route path="/new_review_form/" component={greeting_container} />
     </header>
     <div className="alexa-stuff">
       <Route exact path="/">
@@ -47,12 +51,12 @@ const App = () => (
           <div className="backgroundColorBlendThree" />
         </div>
       </Route>
-      <Route path="/review/create-review" component={NewReview} />
-      <Route path="/review/edit-review" component={EditReview} />
     </div>
     <Route path="/cart_products/" component={CartContainer}></Route>
-
     <Route path="/search/" component={SearchResultContainer}></Route>
+    <Route path="/review/create-review" component={NewReview}></Route>
+    <Route path="/review/edit-review" component={EditReview}></Route>
+
     <div className="account-creation">
       <Switch>
         <AuthRoute exact path="/login" component={login_form_container} />
@@ -61,9 +65,11 @@ const App = () => (
     </div>
 
     <Route exact path="/" component={Footer} />
-
     <Route path="/search/" component={Footer} />
     <Route path="/cart_products/" component={Footer} />
+    <Route path="/review/" component={Footer} />
+    <Route path="/review_form/" component={Footer} />
+    <Route path="/new_review_form/" component={Footer} />
   </div>
 );
 

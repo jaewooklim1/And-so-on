@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useEffect, useState, setShow } from "react";
 import { Link } from "react-router-dom";
+import ModalBody from "react-bootstrap/ModalBody";
+import ModalTitle from "react-bootstrap/ModalTitle";
+import ModalHeader from "react-bootstrap/ModalHeader";
+import Modal from "react-bootstrap/Modal";
 
 class CartProducts extends React.Component {
   constructor(props) {
@@ -32,13 +36,37 @@ class CartProducts extends React.Component {
 
   handleCheckout(e) {
     e.preventDefault();
-    let userProducts = this.props.userCartProducts;
+    let userProducts = Object.keys(this.props.userCartProducts);
+    debugger;
+    console.log(userProducts);
 
     userProducts.forEach((product) => {
       this.props.deleteCartProduct(product);
     });
 
-    this.setState({ purchased: true });
+    // this.setState({ purchased: true });
+    const [show, setShow] = useState(true);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    return (
+      <div>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleClose}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+    );
   }
 
   calculateTotal() {
