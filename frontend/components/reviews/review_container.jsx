@@ -1,25 +1,22 @@
 import { connect } from "react-redux";
 import UpdateReviewForm from "./review_form";
-import { createReview } from "../../actions/review_actions";
+import { fetchReviews, updateReview } from "../../actions/review_actions";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    formType: "Create Review",
-    review: {
-      user_id: state.session.id,
-      title: "",
-      body: " ",
-      product_id: ownProps.productId,
-      rating: 0,
-    },
+    formType: "Update Review",
+    review: state.entities.reviews[ownProps.match.params.reviewId],
+    productId: ownProps.match.params.productId,
+    currentUser: state.session.id,
     product: state.entities.products[ownProps.location.productId],
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    action: (review, productId) => dispatch(createReview(review, productId)),
+    fetchReviews: (productId) => dispatch(fetchReviews(productId)),
+    updateReview: (review) => dispatch(updateReview(review)),
   };
 };
 

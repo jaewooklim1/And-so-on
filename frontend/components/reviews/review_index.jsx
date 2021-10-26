@@ -102,15 +102,15 @@ class ReviewIndex extends React.Component {
 
                   <div className="review-body">{review.body}</div>
 
-                  <div className="review-helpful-text">
+                  {/* <div className="review-helpful-text">
                     {Math.floor(Math.random() * 22)} people found this helpful
-                  </div>
+                  </div> */}
 
                   <div className="review-bottom">
-                    <div className="review-helpful-button-cont">
+                    {/* <div className="review-helpful-button-cont">
                       <button className="review-helpful">Helpful</button>
-                    </div>
-                    <div className="review-abuse">Report abuse</div>
+                    </div> */}
+                    {/* <div className="review-abuse">Report abuse</div> */}
 
                     <div>
                       {this.props.authorId === review.user_id ? (

@@ -81,6 +81,7 @@
   font-family: Amazon, sans-serif;
   margin-bottom: 35px;
   font-size: 14px;
+  width: 530px;
 }
 
 .review-button {
@@ -271,9 +272,106 @@
   margin: auto;
   padding-top: 50px;
   padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  font-family: Amazon, sans-serif;
 }
 
-.review-form-title {
-  font-size: 24px;
-  margin-bottom: 10px;
+.review-form-cont {
+  min-width: 800px;
+}
+
+.new-review-form-title {
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  font-family: Amazon, sans-serif;
+  // margin-left: 25px;
+}
+
+.new-review-form-product-cont {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid gray;
+}
+
+.review-form-rating-cont {
+  font-size: 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid gray;
+}
+
+.review-form-review-cont {
+  font-size: 25px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid gray;
+}
+
+.review-form-review-cont > .h3 {
+  margin-bottom: 30px;
+}
+
+.review-form-review-cont > h4 {
+  margin-bottom: 30px;
+}
+
+.review-form-review-cont > h5 {
+  margin-bottom: 30px;
+}
+
+.review-form-headline-input {
+  width: 100%;
+  height: 31px;
+  font-size: 14px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  outline: none;
+  padding: 5px 7px;
+  margin-bottom: 50px;
+}
+
+.review-form-review-text {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 130px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  outline: none;
+  padding: 5px 7px;
+}
+
+.review-form-btn-cont {
+  padding-top: 50px;
+}
+
+.review-product-photo {
+  height: 125px;
+  width: auto;
+}
+
+.new-review-form-product-name {
+  margin-left: 50px;
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+// .review-rating-star {
+//   height: 38px;
+//   width: 38px;
+// }
+
+.review-form-btn {
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 29px;
+  border-radius: 2px;
+  font-family: Amazon, sans-serif;
+  width: 100%;
 }

@@ -18,7 +18,8 @@ class NewReviewForm extends React.Component {
     // debugger;
     this.props
       .action(this.state, this.props.product.id)
-      .then((res) => console.log(res));
+      .then((res) => console.log(res))
+      .then(this.props.history.push(`/products/${this.props.product.id}`));
   }
 
   updateReview(property) {
@@ -48,7 +49,11 @@ class NewReviewForm extends React.Component {
         >
           <h2 className="new-review-form-title">{this.props.formType}</h2>
           <div className="new-review-form-product-cont">
-            <img src={this.props.product.photoUrl[0]} alt="product-photo" />
+            <img
+              className="review-product-photo"
+              src={this.props.product.photoUrl}
+              alt="product-photo"
+            />
             <div className="new-review-form-product-name">
               {this.props.product.title}
             </div>
@@ -56,7 +61,9 @@ class NewReviewForm extends React.Component {
 
           <div className="review-form-rating-cont">
             <h3 className="review-rating-title">Overall rating</h3>
+            <br></br>
             <Rating
+              className="review-rating-star"
               initialRating={this.state.rating}
               emptySymbol={empty}
               fullSymbol={full}
@@ -65,7 +72,7 @@ class NewReviewForm extends React.Component {
           </div>
 
           <div className="review-form-review-cont">
-            <h3>Add a headline</h3>
+            <h4>Add a headline</h4>
             <input
               className="review-form-headline-input"
               type="text"
@@ -74,7 +81,7 @@ class NewReviewForm extends React.Component {
               placeholder="What's most important to know?"
             />
 
-            <h3>Add a written review</h3>
+            <h5>Add a written review</h5>
             <textarea
               className="review-form-review-text"
               onChange={this.update("body")}
