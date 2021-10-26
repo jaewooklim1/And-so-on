@@ -13,15 +13,6 @@ class NewReviewForm extends React.Component {
     this.update = this.update.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    // debugger;
-    this.props
-      .action(this.state, this.props.product.id)
-      .then((res) => console.log(res))
-      .then(this.props.history.push(`/products/${this.props.product.id}`));
-  }
-
   updateReview(property) {
     return (e) => this.setState({ [property]: e });
   }
@@ -30,6 +21,15 @@ class NewReviewForm extends React.Component {
     return (e) => {
       this.setState({ [field]: e.target.value });
     };
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    // debugger;
+    this.props
+      .action(this.state, this.props.product.id)
+      .then((res) => console.log(res))
+      .then(this.props.history.push(`/products/${this.props.product.id}`));
   }
 
   render() {

@@ -19,14 +19,14 @@ class ReviewIndex extends React.Component {
 
   handleEditReview() {
     return () => {
-      this.props.history.push("/reviews/edit-review");
+      this.props.history.push("/review/edit-review");
     };
   }
 
-  handleDeleteReview(reviewId) {
+  handleDeleteReview(review_id) {
     // e.preventDefault();
     return () =>
-      this.props.destroyReview(reviewId).then(() => window.location.reload());
+      this.props.destroyReview(review_id).then(() => window.location.reload());
   }
 
   // componentDidUpdate() {
@@ -50,6 +50,7 @@ class ReviewIndex extends React.Component {
     const empty = <img className="rating-star" src={empty_star} />;
 
     const randInt = Math.floor(Math.random() * 22);
+    debugger;
     const yesReviews = this.props.reviews ? (
       <div className="r-container">
         <h2 className="review-header">Top Reviews in the United States</h2>
@@ -121,6 +122,12 @@ class ReviewIndex extends React.Component {
                             onClick={this.handleDeleteReview(review.id)}
                           >
                             Delete
+                          </button>
+                          <button
+                            className="review-edit-buttons"
+                            onClick={this.handleEditReview()}
+                          >
+                            Edit
                           </button>
                         </div>
                       ) : null}

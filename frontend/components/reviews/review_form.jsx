@@ -13,6 +13,10 @@ class UpdateReviewForm extends React.Component {
     this.update = this.update.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchReviews(this.props.product.id);
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     // debugger;
@@ -23,16 +27,21 @@ class UpdateReviewForm extends React.Component {
       );
   }
 
+  updateReview(property) {
+    return (e) => this.setState({ [property]: e });
+  }
+
   update(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });
     };
   }
-
   render() {
     const full = <img className="rating-star" src={full_star} />;
 
     const empty = <img className="rating-star" src={empty_star} />;
+    console.log(this.props.product);
+    debugger;
 
     return (
       <div>
@@ -43,9 +52,9 @@ class UpdateReviewForm extends React.Component {
         >
           <h2 className="review-form-title">{this.props.formType}</h2>
           <div className="review-form-product-cont">
-            <img src={this.props.product.photos[0]} alt="product-photo" />
+            <img src={this.props.product.photoUrl} alt="product-photo" />
             <div className="review-form-product-name">
-              {this.props.product.name}
+              {this.props.product.title}
             </div>
           </div>
 
@@ -55,7 +64,7 @@ class UpdateReviewForm extends React.Component {
               initialRating={this.state.rating}
               emptySymbol={empty}
               fullSymbol={full}
-              //   onChange={this.updateReview("rating")}
+              onChange={this.updateReview("rating")}
             />
           </div>
 

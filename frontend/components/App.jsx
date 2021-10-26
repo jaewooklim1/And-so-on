@@ -54,8 +54,8 @@ const App = () => (
     </div>
     <Route path="/cart_products/" component={CartContainer}></Route>
     <Route path="/search/" component={SearchResultContainer}></Route>
-    <Route path="/review/create-review/" component={NewReview}></Route>
-    <Route path="/review/edit-review/" component={EditReview}></Route>
+    <Route path="/review/create-review" component={NewReview}></Route>
+    <Route path="/review/edit-review" component={EditReview}></Route>
 
     <div className="account-creation">
       <Switch>

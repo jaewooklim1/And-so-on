@@ -25,6 +25,11 @@ export const fetchReviews = (productId) => (dispatch) => {
   );
 };
 
+export const fetchReview = (reviewId, productId) => (dispatch) =>
+  ReviewAPIUtil.fetchReview(reviewId, productId).then((review) =>
+    dispatch(receiveReview(review))
+  );
+
 export const createReview = (review, productId) => (dispatch) => {
   debugger;
   return ReviewAPIUtil.createReview(review, productId).then((review) =>
@@ -39,7 +44,7 @@ export const updateReview = (review) => (dispatch) => {
 };
 
 export const destroyReview = (reviewId) => (dispatch) => {
-  return ReviewAPIUtil.destroyReview(reviewId).then((reviewId) =>
-    dispatch(removeReview(reviewId))
+  return ReviewAPIUtil.destroyReview(reviewId).then((review) =>
+    dispatch(removeReview(review))
   );
 };
