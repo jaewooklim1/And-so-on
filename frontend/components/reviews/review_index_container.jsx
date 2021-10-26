@@ -14,6 +14,8 @@ const mapStateToProps = (state, ownProps) => {
     authorId: state.session.id,
     userId: Object.keys(state.entities.users),
     reviewId: Object.keys(state.entities.reviews),
+    product_id: ownProps.location.productId,
+    product: state.entities.products[ownProps.location.productId],
   };
 };
 

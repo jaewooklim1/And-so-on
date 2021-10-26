@@ -13,9 +13,9 @@ class UpdateReviewForm extends React.Component {
     this.update = this.update.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchReviews(this.props.product.id);
-  }
+  // componentDidMount() {
+  //   this.props.fetchReviews(this.props.product.id);
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -51,40 +51,40 @@ class UpdateReviewForm extends React.Component {
           onSubmit={this.handleSubmit}
         >
           <h2 className="review-form-title">{this.props.formType}</h2>
-          <div className="review-form-product-cont">
+          {/* <div className="review-form-product-cont">
             <img src={this.props.product.photoUrl} alt="product-photo" />
             <div className="review-form-product-name">
               {this.props.product.title}
             </div>
-          </div>
+          </div> */}
 
           <div className="review-form-rating-cont">
             <h3 className="review-rating-title">Overall rating</h3>
-            <Rating
+            {/* <Rating
               initialRating={this.state.rating}
               emptySymbol={empty}
               fullSymbol={full}
               onChange={this.updateReview("rating")}
-            />
+            /> */}
           </div>
 
           <div className="review-form-review-cont">
             <h3>Add a headline</h3>
-            <input
+            {/* <input
               className="review-form-headline-input"
               type="text"
               onChange={this.update("title")}
               value={this.state.title}
               placeholder="What's most important to know?"
-            />
+            /> */}
 
             <h3>Add a written review</h3>
-            <textarea
+            {/* <textarea
               className="review-form-review-text"
               onChange={this.update("body")}
               value={this.state.body}
               placeholder="What did you like or dislike? What did you use this product for?"
-            ></textarea>
+            ></textarea> */}
           </div>
 
           <div className="review-form-btn-cont">
