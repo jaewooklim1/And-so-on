@@ -4,22 +4,22 @@ import { fetchReview, updateReview } from "../../actions/review_actions";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
+  const review = state.entities.reviews[ownProps.match.params.reviewId];
+  // debugger;
+
   return {
     formType: "Update Review",
-    review: state.entities.reviews[ownProps.match.params.reviewId],
+    review: review,
     user_id: state.session.id,
-    product_id: ownProps.match.params.productId,
-
-    product: state.entities.products[ownProps.location.productId],
+    product_id: review.productId,
+    product: state.entities.products[review.product_id],
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  debugger;
+  // debugger;
   return {
-    fetchReview: (reviewId, productId) =>
-      dispatch(fetchReview(reviewId, productId)),
+    fetchReview: (reviewId) => dispatch(fetchReview(reviewId)),
     updateReview: (review) => dispatch(updateReview(review)),
   };
 };

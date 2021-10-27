@@ -170,9 +170,11 @@ class Product extends React.Component {
     var avgRating = 0;
 
     if (Object.values(this.props.userReviews).length > 0) {
+      debugger;
       Object.values(this.props.userReviews)
         .filter((ele) => {
-          return currentProductId === ele.product_id.toString();
+          debugger;
+          return currentProductId === ele.product_id?.toString();
         })
         .map((ele) => {
           numOfReviews++;
@@ -512,6 +514,7 @@ class Product extends React.Component {
   }
 
   render() {
+    debugger;
     return Object.values(this.props.userReviews).length === 0
       ? this.hasNoReviews()
       : this.hasReviews();

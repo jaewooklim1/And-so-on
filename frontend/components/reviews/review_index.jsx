@@ -17,9 +17,9 @@ class ReviewIndex extends React.Component {
     // debugger;
   }
 
-  handleEditReview() {
+  handleEditReview(reviewId) {
     return () => {
-      this.props.history.push("/review/edit-review");
+      this.props.history.push(`/review/edit-review/${reviewId}`);
     };
   }
 
@@ -35,8 +35,8 @@ class ReviewIndex extends React.Component {
 
   render() {
     const { reviews } = this.props;
-
     const currentProductId = this.props.match.params.productId;
+    debugger;
     // reviews.filter((ele) => {
     //   debugger;
     //   return currentProductId === ele.product_id.toString();
@@ -57,7 +57,8 @@ class ReviewIndex extends React.Component {
         <ul className="review-ul">
           {reviews
             .filter((ele) => {
-              return currentProductId === ele.product_id.toString();
+              debugger;
+              return currentProductId === ele.product_id?.toString();
             })
             .map((review) => {
               const reviewDate = new Date(review.updated_at).toDateString();
@@ -125,7 +126,7 @@ class ReviewIndex extends React.Component {
                           </button>
                           <button
                             className="review-edit-buttons"
-                            onClick={this.handleEditReview()}
+                            onClick={this.handleEditReview(review.id)}
                           >
                             Edit
                           </button>

@@ -25,8 +25,8 @@ export const fetchReviews = (productId) => (dispatch) => {
   );
 };
 
-export const fetchReview = (reviewId, productId) => (dispatch) =>
-  ReviewAPIUtil.fetchReview(reviewId, productId).then((review) =>
+export const fetchReview = (reviewId) => (dispatch) =>
+  ReviewAPIUtil.fetchReview(reviewId).then((review) =>
     dispatch(receiveReview(review))
   );
 

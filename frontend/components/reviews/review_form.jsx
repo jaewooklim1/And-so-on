@@ -13,15 +13,15 @@ class UpdateReviewForm extends React.Component {
     this.update = this.update.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.props.fetchReviews(this.props.product.id);
-  // }
+  componentDidMount() {
+    this.props.fetchReview(this.props.match.params.reviewId);
+  }
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger;
+    debugger;
     this.props
-      .action(this.state)
+      .updateReview(this.state)
       .then(() =>
         this.props.history.push(`/products/${this.props.product.id}`)
       );
@@ -37,54 +37,59 @@ class UpdateReviewForm extends React.Component {
     };
   }
   render() {
+    // debugger;
     const full = <img className="rating-star" src={full_star} />;
 
     const empty = <img className="rating-star" src={empty_star} />;
     console.log(this.props.product);
-    debugger;
+    // debugger;
 
     return (
-      <div>
+      <div className="new-review-form-container">
         <form
           className="review-form-cont"
           action=""
           onSubmit={this.handleSubmit}
         >
-          <h2 className="review-form-title">{this.props.formType}</h2>
-          {/* <div className="review-form-product-cont">
-            <img src={this.props.product.photoUrl} alt="product-photo" />
-            <div className="review-form-product-name">
+          <h2 className="new-review-form-title">{this.props.formType}</h2>
+          <div className="new-review-form-product-cont">
+            <img
+              className="review-product-photo"
+              src={this.props.product.photoUrl}
+              alt="product-photo"
+            />
+            <div className="new-review-form-product-name">
               {this.props.product.title}
             </div>
-          </div> */}
+          </div>
 
           <div className="review-form-rating-cont">
             <h3 className="review-rating-title">Overall rating</h3>
-            {/* <Rating
+            <Rating
               initialRating={this.state.rating}
               emptySymbol={empty}
               fullSymbol={full}
               onChange={this.updateReview("rating")}
-            /> */}
+            />
           </div>
 
           <div className="review-form-review-cont">
             <h3>Add a headline</h3>
-            {/* <input
+            <input
               className="review-form-headline-input"
               type="text"
               onChange={this.update("title")}
               value={this.state.title}
               placeholder="What's most important to know?"
-            /> */}
+            />
 
             <h3>Add a written review</h3>
-            {/* <textarea
+            <textarea
               className="review-form-review-text"
               onChange={this.update("body")}
               value={this.state.body}
               placeholder="What did you like or dislike? What did you use this product for?"
-            ></textarea> */}
+            ></textarea>
           </div>
 
           <div className="review-form-btn-cont">
