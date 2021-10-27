@@ -44,29 +44,12 @@ class CartProducts extends React.Component {
       this.props.deleteCartProduct(product);
     });
 
-    // this.setState({ purchased: true });
+    this.setState({ purchased: true });
     const [show, setShow] = useState(true);
+    debugger;
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    return (
-      <div>
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </div>
-    );
   }
 
   calculateTotal() {
@@ -154,10 +137,6 @@ class CartProducts extends React.Component {
             onClick={(e) => this.handleCheckout(e)}
           >
             Proceed to checkout
-            <div className="checkout-message">
-              Thank you for your purchase! Your order has been received and is
-              being processed.
-            </div>
           </button>
         </div>
       </div>
@@ -197,10 +176,47 @@ class CartProducts extends React.Component {
     );
   }
 
+  purchasedCart() {
+    return (
+      <div className="cart-container">
+        <div className="inner-cart-container">
+          <img
+            className="purchased-cart-gif"
+            src="https://i.imgur.com/HbanNLg.gif"
+          ></img>
+          <br></br>
+          <div className="purchased-cart-message">
+            Thank you for your purchase! Your order has been received and is
+            being processed.
+          </div>
+        </div>
+        <div className="total-price-container">
+          <div className="total-price">
+            Subtotal: <span>({this.props.userCartProducts.length}Items) </span>
+            <span style={{ fontWeight: "bold" }}>
+              ${this.calculateTotal().toFixed(2)}
+            </span>
+          </div>
+          <div className="checkout-button-container"></div>
+        </div>
+      </div>
+    );
+  }
+
   render() {
-    return Object.values(this.props.userCartProducts).length === 0
-      ? this.emptyCart()
-      : this.filledCart();
+    if (
+      Object.values(this.props.userCartProducts).length === 0 &&
+      this.state.purchased === true
+    ) {
+      return this.purchasedCart();
+    } else if (
+      Object.values(this.props.userCartProducts).length > 0 &&
+      this.state.purchased === false
+    ) {
+      return this.filledCart();
+    } else {
+      return this.emptyCart();
+    }
   }
 }
 
