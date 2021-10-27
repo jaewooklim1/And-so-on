@@ -134,3 +134,31 @@
   font-family: Amazon, sans-serif;
   font-weight: bolder;
 }
+
+.checkout-message {
+  width: 300px;
+  height: 73px;
+  color: #007600;
+  font-size: 17px;
+  line-height: 25px;
+  top: 68px;
+  margin-left: -29px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: none;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.proceed-to-checkout:focus .checkout-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proceed-to-checkout:focus {
+  outline: none;
+  padding-top: 8px;
+}

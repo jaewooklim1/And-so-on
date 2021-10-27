@@ -154,6 +154,10 @@ class CartProducts extends React.Component {
             onClick={(e) => this.handleCheckout(e)}
           >
             Proceed to checkout
+            <div className="checkout-message">
+              Thank you for your purchase! Your order has been received and is
+              being processed.
+            </div>
           </button>
         </div>
       </div>
