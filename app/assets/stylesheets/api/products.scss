@@ -99,7 +99,8 @@
 
 .product-page {
   background-color: white;
-  width: 1750px;
+  min-width: 1400px;
+  // width: 1750px;
   height: 1500px;
   font-family: Amazon, sans-serif;
 }
@@ -156,7 +157,7 @@
 }
 
 .product-title {
-  font-size: 50px;
+  font-size: 43px;
   margin-left: 180px;
   margin-top: 80px;
   // width: 150px;
@@ -176,6 +177,7 @@
 }
 
 .split-center-product-column {
+  margin-left: 25%;
   min-width: 500px;
 }
 
@@ -187,7 +189,7 @@
 .buybox {
   display: absolute;
   margin-top: 120px;
-  margin-left: 150px;
+  margin-left: 10%;
   // margin: 120px 120px 22px 20px;
   width: 230px;
   border-radius: 10px;
