@@ -22,7 +22,6 @@ class CartProducts extends React.Component {
 
   componentDidMount() {
     this.props.fetchCartProducts();
-    // debugger;
   }
 
   componentDidUpdate(prevProps) {
@@ -37,7 +36,6 @@ class CartProducts extends React.Component {
   handleCheckout(e) {
     e.preventDefault();
     let userProducts = Object.keys(this.props.userCartProducts);
-    debugger;
     console.log(userProducts);
 
     userProducts.forEach((product) => {
@@ -46,8 +44,6 @@ class CartProducts extends React.Component {
 
     this.setState({ purchased: true });
     const [show, setShow] = useState(true);
-    debugger;
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
   }
@@ -56,7 +52,6 @@ class CartProducts extends React.Component {
     let total = 0;
     let userProducts = Object.values(this.props.userCartProducts);
     console.log(userProducts);
-    debugger;
     userProducts.forEach((product) => {
       total += product.price;
     });
