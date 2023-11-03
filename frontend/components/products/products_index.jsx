@@ -17,8 +17,6 @@ class ProductsIndex extends React.Component {
 
     const prodRange = this.props.products.length;
 
-    debugger;
-
     const randNum = Array(prodRange)
       .fill(0)
       .map((_, i) => i);
@@ -33,8 +31,6 @@ class ProductsIndex extends React.Component {
         counter += 1;
       }
     }
-
-    // debugger;
 
     const { products } = this.props;
     const prodVal = Object.values(products);
@@ -61,7 +57,6 @@ class ProductsIndex extends React.Component {
   }
 
   render() {
-    // debugger
     const { products } = this.props;
 
     return (

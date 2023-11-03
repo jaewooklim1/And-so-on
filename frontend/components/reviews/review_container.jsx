@@ -5,7 +5,6 @@ import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state, ownProps) => {
   const review = state.entities.reviews[ownProps.match.params.reviewId];
-  // debugger;
 
   return {
     formType: "Update Review",
@@ -17,7 +16,6 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  // debugger;
   return {
     fetchReview: (reviewId) => dispatch(fetchReview(reviewId)),
     updateReview: (review) => dispatch(updateReview(review)),

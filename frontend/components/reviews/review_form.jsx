@@ -19,7 +19,6 @@ class UpdateReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
     this.props
       .updateReview(this.state)
       .then(() =>
@@ -37,12 +36,10 @@ class UpdateReviewForm extends React.Component {
     };
   }
   render() {
-    // debugger;
     const full = <img className="rating-star" src={full_star} />;
 
     const empty = <img className="rating-star" src={empty_star} />;
     console.log(this.props.product);
-    // debugger;
 
     return (
       <div className="new-review-form-container">

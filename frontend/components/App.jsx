@@ -16,7 +16,6 @@ import NewReview from "./reviews/new_review_container";
 import EditReview from "./reviews/review_container";
 
 const App = () => {
-  debugger;
   return (
     <div>
       <header>

@@ -52,7 +52,6 @@ class Product extends React.Component {
   }
 
   openModal() {
-    // debugger
     this.setState({ modalIsOpen: true });
   }
 
@@ -64,7 +63,6 @@ class Product extends React.Component {
     this.props.fetchProduct(this.props.match.params.productId);
     this.props.fetchProducts();
     this.props.fetchReviews(this.props.match.params.productId);
-    // debugger;
     const history = createHistory();
     if (history.location.state && history.location.state.transaction) {
       let state = { ...history.location.state };
@@ -81,10 +79,6 @@ class Product extends React.Component {
     }
   }
 
-  // componentWillUnmount() {
-  //   this.props.clearState();
-  // }
-
   addProduct(currentProduct) {
     this.props
       .createCartProduct({
@@ -98,7 +92,6 @@ class Product extends React.Component {
     e.preventDefault();
 
     if (this.props.sessionId) {
-      // debugger;
       let { product, userCartProducts } = this.props;
       let cartproducts = Object.values(userCartProducts);
       let productsArr = [];
@@ -122,21 +115,6 @@ class Product extends React.Component {
   }
 
   hasReviews() {
-    // let reviewArr = Object.keys(this.props.userReviews); //reviewArr = (2) ["11", "30"]
-    // let reviewArr2 = Object.values(this.props.userReviews);
-    // debugger;
-    // let reviewArrActual = [];
-    // debugger;
-
-    // reviewArr2.filter(
-    //   (ele) => this.props.match.params.productId === ele.product_id
-    // );
-
-    // console.log(reviewArr2);
-
-    // console.log(reviewArrActual);
-    // debugger;
-
     let product;
     if (this.props.product === undefined) {
       return null;
@@ -170,10 +148,8 @@ class Product extends React.Component {
     var avgRating = 0;
 
     if (Object.values(this.props.userReviews).length > 0) {
-      debugger;
       Object.values(this.props.userReviews)
         .filter((ele) => {
-          debugger;
           return currentProductId === ele.product_id?.toString();
         })
         .map((ele) => {
@@ -182,9 +158,7 @@ class Product extends React.Component {
         });
 
       avgRating = sumOfReviews / numOfReviews;
-      debugger;
     }
-    //implicit return
 
     return (
       <div className="product-page">
@@ -514,7 +488,6 @@ class Product extends React.Component {
   }
 
   render() {
-    debugger;
     return Object.values(this.props.userReviews).length === 0
       ? this.hasNoReviews()
       : this.hasReviews();

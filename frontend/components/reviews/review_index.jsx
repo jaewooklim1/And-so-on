@@ -14,7 +14,6 @@ class ReviewIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchReviews(this.props.productId);
-    // debugger;
   }
 
   handleEditReview(reviewId) {
@@ -24,49 +23,31 @@ class ReviewIndex extends React.Component {
   }
 
   handleDeleteReview(review_id) {
-    // e.preventDefault();
     return () =>
       this.props.destroyReview(review_id).then(() => window.location.reload());
   }
 
-  // componentDidUpdate() {
-  //     // this.componentDidMount();
-  // }
-
   render() {
     const { reviews } = this.props;
     const currentProductId = this.props.match.params.productId;
-    debugger;
-    // reviews.filter((ele) => {
-    //   debugger;
-    //   return currentProductId === ele.product_id.toString();
-    // });
-    // console.log(reviews);
-
-    // debugger;
 
     const full = <img className="rating-star" src={full_star} />;
 
     const empty = <img className="rating-star" src={empty_star} />;
 
     const randInt = Math.floor(Math.random() * 22);
-    debugger;
     const yesReviews = this.props.reviews ? (
       <div className="r-container">
         <h2 className="review-header">Top Reviews in the United States</h2>
         <ul className="review-ul">
           {reviews
             .filter((ele) => {
-              debugger;
               return currentProductId === ele.product_id?.toString();
             })
             .map((review) => {
               const reviewDate = new Date(review.updated_at).toDateString();
-              // debugger
               const dataLink = {
                 pathname: "/review/edit-review",
-                // productId: `${this.props.product.id}`,
-                // product: `${this.props.product}`,
                 review: `${review}`,
               };
 
