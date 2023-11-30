@@ -19,9 +19,7 @@ const App = () => {
   return (
     <div>
       <header>
-        <Link to="/" className="header-link">
-          {/* <h1>And-so-on</h1> */}
-        </Link>
+        <Link to="/" className="header-link"></Link>
         <Route exact path="/" component={greeting_container} />
         <Route path="/products/" component={greeting_container} />
         <Route path="/search/" component={greeting_container} />
@@ -33,7 +31,6 @@ const App = () => {
       </header>
       <div className="alexa-stuff">
         <Route exact path="/">
-          {/* <PicCarousel></PicCarousel> */}
           <img className="picture-ad" src="https://i.imgur.com/OjMXcyy.jpg" />
           <div className="backgroundColorBlend" />
         </Route>

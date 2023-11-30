@@ -40,13 +40,19 @@ class SessionForm extends React.Component {
 
   demoLogin(e) {
     e.preventDefault();
+
+    console.log("here");
+
     const demoUser = {
-      email: "Demouser123@gmail.com",
-      password: "Demouser123",
+      email: "DemoUser12345@gmail.com",
+      password: "Demouser12345",
     };
-    this.props
-      .processForm(demoUser)
-      .then((demoUser) => this.props.history.push("/"));
+
+    this.setState({
+      email: demoUser.email,
+      password: demoUser.password,
+    });
+    this.props.processForm(demoUser);
   }
 
   renderErrors() {
@@ -173,7 +179,7 @@ class SessionForm extends React.Component {
                   : ""}
               </div>
               <br></br>
-              {/* {this.props.formType === "signup" ? (
+              {this.props.formType === "signup" ? (
                 <label>
                   Re-enter Password
                   <br></br>
@@ -196,7 +202,7 @@ class SessionForm extends React.Component {
                 </div>
               ) : (
                 <></>
-              )} */}
+              )}
               <br></br>
               <button className="submit-button" type="submit">
                 {this.props.formType}
@@ -205,14 +211,11 @@ class SessionForm extends React.Component {
             </form>
             <br></br>
             <Link to={`/${link}`}>{link}</Link> instead
-            <br></br>
-            <br></br>
-            <br></br>
-            <button className="demo-user-button" onClick={this.demoLogin}>
-              Demo User Login
-            </button>
-            <br></br>
-            <br></br>
+            <div className="login-button-area">
+              <button className="demo-user-button" onClick={this.demoLogin}>
+                Demo User Login
+              </button>
+            </div>
             {this.props.formType === "signup" ? (
               <label className="terms-of-conditions">
                 By creating an account, you agree to And-so-on's non-existent

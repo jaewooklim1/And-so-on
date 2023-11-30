@@ -7,8 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # User.destroy_all
-# 
-# demo_user = User.create!(username: 'Test User', email: 'testuser@gmail.com', password:'123456')
 
 require 'open-uri'
 
@@ -89,7 +87,7 @@ file15 = open('./app/assets/images/treadmill.jpg')
 product15.photo.attach(io: file15, filename: 'treadmill.jpg')
 product15.save!
 
-demouser = User.create!(email: "Demouser12345@gmail.com", username: "Demouser", password_digest: "Demouser12345")
+demouser = User.create!(email: "DemoUser12345@gmail.com", username: "Demouser", password_digest: "Demouser12345")
 demouser.save!
 
 
