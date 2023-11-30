@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# User.destroy_all
+User.destroy_all
 
 require 'open-uri'
 
@@ -87,7 +87,7 @@ file15 = open('./app/assets/images/treadmill.jpg')
 product15.photo.attach(io: file15, filename: 'treadmill.jpg')
 product15.save!
 
-demouser = User.create!(email: "DemoUser12345@gmail.com", username: "Demouser", password_digest: "Demouser12345")
+demouser = User.create!(email: "DemoUser12345@gmail.com", username: "Demouser", password: "Demouser12345")
 demouser.save!
 
 

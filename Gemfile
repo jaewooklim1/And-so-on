@@ -27,6 +27,7 @@ gem 'bcrypt'
 gem 'jquery-rails'
 gem "aws-sdk-s3"
 gem 'open-uri'
+gem 'listen'
 # gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
@@ -40,7 +41,7 @@ gem 'open-uri'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '~> 1.13'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

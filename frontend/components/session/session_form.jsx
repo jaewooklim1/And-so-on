@@ -41,17 +41,14 @@ class SessionForm extends React.Component {
   demoLogin(e) {
     e.preventDefault();
 
-    console.log("here");
+    // console.log("here");
 
     const demoUser = {
       email: "DemoUser12345@gmail.com",
       password: "Demouser12345",
     };
 
-    this.setState({
-      email: demoUser.email,
-      password: demoUser.password,
-    });
+    this.setState(demoUser);
     this.props.processForm(demoUser);
   }
 
@@ -211,7 +208,7 @@ class SessionForm extends React.Component {
             </form>
             <br></br>
             <Link to={`/${link}`}>{link}</Link> instead
-            <div className="login-button-area">
+            <div className="demo-login-button-field">
               <button className="demo-user-button" onClick={this.demoLogin}>
                 Demo User Login
               </button>
