@@ -83,3 +83,4 @@ production:
   database: And-So-On_production
   username: And-So-On
   password: <%= ENV['AND-SO-ON_DATABASE_PASSWORD'] %>
+  sslmode: require
