@@ -39,4 +39,4 @@ All items are rendered when you first go onto the homepage. Separated into cards
 
 "Algorithm" that randomly generates the order of the images.
 
-![image]![alt text](image.png)
+![image](image.png)
