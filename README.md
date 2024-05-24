@@ -40,3 +40,7 @@ All items are rendered when you first go onto the homepage. Separated into cards
 "Algorithm" that randomly generates the order of the images.
 
 ![image](image.png)
+
+randomNumber method
+
+![alt text](image-1.png)
