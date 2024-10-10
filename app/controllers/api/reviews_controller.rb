@@ -3,7 +3,6 @@ class Api::ReviewsController < ApplicationController
     skip_before_action :verify_authenticity_token
 
     def index 
-        # debugger
         if params[:product_id]
             @reviews = Review.where(product_id: params[:product_id])
 

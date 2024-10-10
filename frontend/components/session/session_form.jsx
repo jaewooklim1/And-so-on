@@ -41,8 +41,6 @@ class SessionForm extends React.Component {
   demoLogin(e) {
     e.preventDefault();
 
-    // console.log("here");
-
     const demoUser = {
       email: "DemoUser12345@gmail.com",
       password: "Demouser12345",
@@ -56,7 +54,6 @@ class SessionForm extends React.Component {
     console.log(this.props.errors);
     console.log(this.props.session);
     let errorArray = Array.from(this.props.errors.session);
-    // console.log(errorArray);
     return (
       <ul>
         {errorArray.map((error, i) => (
@@ -64,23 +61,7 @@ class SessionForm extends React.Component {
         ))}
       </ul>
     );
-    // console.log(errorArray);
-
-    // </ul>
   }
-
-  // renderErrors() {
-  //   return (
-  //     <div>
-  //       {this.props.errors.map((error, i) => (
-  //         <span key={`error-${i}`}>
-  //           <br className="err-spacer"></br>
-  //           {error}
-  //         </span>
-  //       ))}
-  //     </div>
-  //   );
-  // }
 
   update(field) {
     return (e) =>
@@ -88,10 +69,6 @@ class SessionForm extends React.Component {
         [field]: e.currentTarget.value,
       });
   }
-
-  // componentDidMount() {
-  //   this.props.dispatchedClearErrors();
-  // }
 
   render() {
     let link = this.props.formType === "login" ? "signup" : "login";
@@ -192,7 +169,7 @@ class SessionForm extends React.Component {
               )}
               {this.props.formType === "signup" ? (
                 <div className="form-errors">
-                  {this.state.password === this.state.password_confirmation &&
+                  {this.state.password !== this.state.password_confirmation &&
                   this.state.submitPressed
                     ? "Password and password confirmation must match"
                     : ""}
