@@ -90,7 +90,6 @@ class Product extends React.Component {
 
   addToCart(e) {
     e.preventDefault();
-
     if (this.props.sessionId) {
       let { product, userCartProducts } = this.props;
       let cartproducts = Object.values(userCartProducts);
